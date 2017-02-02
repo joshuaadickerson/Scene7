@@ -27,6 +27,7 @@ class Layer
         LayerCommand\Map,
         LayerCommand\Noise,
         LayerCommand\Opacity,
+        LayerCommand\Origin,
         LayerCommand\Saturation,
         LayerCommand\Sharpen;
 
