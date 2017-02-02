@@ -1,0 +1,22 @@
+<?php
+
+namespace Scene7\Commands;
+
+trait ViewRectangle
+{
+    public function setViewRectangle($coordX, $coordY, $sizeX, $sizeY, $scale = null)
+    {
+        $coordX = (float) $coordX;
+        $coordY = (float) $coordY;
+        $sizeX = (float) $sizeX;
+        $sizeY = (float) $sizeY;
+
+        $rectangle = $coordX . ',' . $coordY . ',' . $sizeX . ',' . $sizeY;
+        if ($scale !== null) {
+            $rectangle .= ',' . ((float) $scale);
+        }
+
+        $this->addCommand(array('rect' => $rectangle));
+        return $this;
+    }
+}
