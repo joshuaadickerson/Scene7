@@ -21,7 +21,14 @@ class Layer
         LayerCommand\Effect,
         LayerCommand\Extend,
         LayerCommand\Flip,
-        LayerCommand\Hide;
+        LayerCommand\Hide,
+        LayerCommand\Hue,
+        LayerCommand\Invert,
+        LayerCommand\Map,
+        LayerCommand\Noise,
+        LayerCommand\Opacity,
+        LayerCommand\Saturation,
+        LayerCommand\Sharpen;
 
     protected $id;
     protected $name;
