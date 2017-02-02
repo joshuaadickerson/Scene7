@@ -29,6 +29,7 @@ class Layer
         LayerCommand\Opacity,
         LayerCommand\Origin,
         LayerCommand\PathAttributes,
+        LayerCommand\PathEmbed,
         LayerCommand\Saturation,
         LayerCommand\Sharpen;
 
