@@ -1,6 +1,6 @@
 <?php
 
-namespace Scene7\Commands;
+namespace Scene7\Commands\Layer;
 
 trait Opacity
 {
