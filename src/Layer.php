@@ -28,6 +28,7 @@ class Layer
         LayerCommand\Noise,
         LayerCommand\Opacity,
         LayerCommand\Origin,
+        LayerCommand\PathAttributes,
         LayerCommand\Saturation,
         LayerCommand\Sharpen;
 
