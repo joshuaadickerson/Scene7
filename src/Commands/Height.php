@@ -14,4 +14,9 @@ trait Height
         $this->addCommand(['hei' => $height]);
         return $this;
     }
+
+    public function getHeight()
+    {
+        return isset($this->commands['hei']) ? $this->commands['hei'] : null;
+    }
 }

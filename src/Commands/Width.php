@@ -11,7 +11,12 @@ trait Width
             throw new \InvalidArgumentException('Width must be an integer greater than 0');
         }
 
-        $this->addCommand(array('wid' => $width));
+        $this->addCommand(['wid' => $width]);
         return $this;
+    }
+
+    public function getWidth()
+    {
+        return isset($this->commands['wid']) ? $this->commands['wid'] : null;
     }
 }

@@ -3,8 +3,9 @@
 namespace Scene7\Requests;
 
 use Scene7\Factory;
+use Scene7\RenderInterface;
 
-abstract class AbstractRequest
+abstract class AbstractRequest implements RenderInterface
 {
     protected $baseUrl;
     protected $file;
@@ -24,6 +25,11 @@ abstract class AbstractRequest
     {
         $this->commands = array_merge($this->commands, $commands);
         return $this;
+    }
+
+    public function getCommands()
+    {
+        return $this->commands;
     }
 
     public function getQuery($obscure = false)
@@ -50,6 +56,17 @@ abstract class AbstractRequest
         }
 
         return base64_encode(urldecode(http_build_query($commands)));
+    }
+
+    /**
+     * A wrapper for getUri()
+     *
+     * @param bool $obscure
+     * @return string
+     */
+    public function render($obscure = false)
+    {
+        return $this->getUri($obscure);
     }
 
     public function getUri($obscure = false)

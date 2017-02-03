@@ -1,5 +1,7 @@
 <?php
 
+namespace Scene7\Requests;
+
 use PHPUnit\Framework\TestCase;
 
 final class ImageTest extends TestCase
