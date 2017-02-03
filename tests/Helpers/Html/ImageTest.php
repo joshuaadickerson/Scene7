@@ -8,19 +8,19 @@ final class ImageTest extends TestCase
 {
     public function testBasicImageTag()
     {
-        $this->assertEquals(new Image, '<img>');
+        $this->assertEquals(new Image('foo', ''), '<img src="foo" alt="">');
     }
 
     public function testSettingAttributesWithConstructor()
     {
-        $image = new Image(['foo' => 'bar']);
-        $this->assertEquals($image->render(), '<img foo="bar">');
+        $image = new Image('myImg.png', '', ['foo' => 'bar']);
+        $this->assertEquals($image->render(), '<img src="myImg.png" alt="" foo="bar">');
     }
 
     public function testImageHasId()
     {
-        $image = new Image;
+        $image = new Image('myImg.png', '');
         $image->setId('myId');
-        $this->assertEquals($image->render(), '<img id="myId">');
+        $this->assertEquals($image->render(), '<img src="myImg.png" alt="" id="myId">');
     }
 }

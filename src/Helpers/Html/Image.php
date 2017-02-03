@@ -4,8 +4,10 @@ namespace Scene7\Helpers\Html;
 
 class Image extends AbstractTag
 {
-    public function __construct(array $attributes = [])
+    public function __construct($src, $alt, array $attributes = [])
     {
+        $this->setSrc($src);
+        $this->setAlt($alt);
         $this->setAttributes($attributes);
     }
 
@@ -26,6 +28,10 @@ class Image extends AbstractTag
 
     public function render()
     {
+        if (!isset($this->attributes['src']) || !isset($this->attributes['alt'])) {
+            throw new \InvalidRuntimeException('Image requires src and alt attributes');
+        }
+
         return '<img' . $this->renderAttributes() . '>';
     }
 }

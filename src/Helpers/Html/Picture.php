@@ -24,7 +24,7 @@ class Picture extends AbstractTag
     public function setImage($image, array $attributes = [])
     {
         if (!($image instanceof $image)) {
-            $image = new Image($image, $attributes);
+            $image = new Image($image, $attributes['alt'] ?: '', $attributes);
         }
 
         $this->image = $image;
