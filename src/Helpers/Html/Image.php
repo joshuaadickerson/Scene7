@@ -21,7 +21,7 @@ class Image extends AbstractTag
 
     public function setAlt($text)
     {
-        return $this->setAlt('alt', $text);
+        return $this->setAttribute('alt', $text);
     }
 
     public function render()
