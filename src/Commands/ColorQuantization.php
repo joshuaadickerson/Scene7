@@ -23,7 +23,7 @@ trait ColorQuantization
             $quantize .= ',' . $colorList;
         }
 
-        $this->addCommand(array('quantize' => $quantize));
+        $this->addCommand(['quantize' => $quantize]);
         return $this;
     }
 

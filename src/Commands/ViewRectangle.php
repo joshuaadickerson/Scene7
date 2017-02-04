@@ -16,7 +16,7 @@ trait ViewRectangle
             $rectangle .= ',' . ((float) $scale);
         }
 
-        $this->addCommand(array('rect' => $rectangle));
+        $this->addCommand(['rect' => $rectangle]);
         return $this;
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Scene7;
 
+use Scene7\Commands\Layer;
 use Scene7\Requests\AbstractRequest;
 
 class Factory

@@ -2,6 +2,8 @@
 
 namespace Scene7\Commands;
 
+use Scene7\Factory;
+
 trait LayerFactory
 {
     protected $layers = [];
@@ -30,7 +32,7 @@ trait LayerFactory
 
     public function getMaxLayer()
     {
-        return max(array_keys($this->layers));
+        return empty($this->layers) ? 0 : max(array_keys($this->layers));
     }
 
     public function getLayer($id)
@@ -41,6 +43,30 @@ trait LayerFactory
     public function getLayerByName($name)
     {
         return isset($this->layerNameMap[$name]) ? $this->layers[$this->layerNameMap[$name]] : $this->newLayer(null, $this->layerNameMap[$name]);
+    }
+
+    public function renderLayers($obscure = false)
+    {
+        $layers = '';
+
+        foreach ($this->layers as $layer) {
+            $layers .= '&' . $layer;
+        }
+
+        return $layers;
+    }
+
+    public function getQuery($obscure = false)
+    {
+        // @todo this doesn't work
+        if ($obscure) {
+
+        } else {
+            $query = parent::getQuery();
+            $query .= $this->renderLayers();
+        }
+
+        return $query;
     }
 
     /*

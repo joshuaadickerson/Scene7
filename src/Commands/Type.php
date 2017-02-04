@@ -6,7 +6,7 @@ trait Type
 {
     public function setType($type)
     {
-        $this->addCommand(array('type' => $type));
+        $this->addCommand(['type' => $type]);
         return $this;
     }
 }

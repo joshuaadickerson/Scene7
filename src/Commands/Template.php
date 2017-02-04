@@ -6,7 +6,7 @@ trait Template
 {
     public function setTemplate($template)
     {
-        $this->addCommand(array('template' => $template));
+        $this->addCommand(['template' => $template]);
         return $this;
     }
 }

@@ -6,7 +6,7 @@ trait BackgroundColor
 {
     public function setBackgroundColor($color)
     {
-        $this->addCommand(array('bgc' => $color));
+        $this->addCommand(['bgc' => $color]);
         return $this;
     }
 }

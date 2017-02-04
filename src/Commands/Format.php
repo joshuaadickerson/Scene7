@@ -2,6 +2,8 @@
 
 namespace Scene7\Commands;
 
+use Scene7\Definitions\Formats;
+
 trait Format
 {
     public function setFormat($format, $pixelType = '', $compression = '')
@@ -34,7 +36,20 @@ trait Format
 
     public function getAllowedFormats()
     {
-        return array('jpeg', 'png', 'png-alpha', 'tif', 'tif-alpha', 'swf', 'swf-alpha', 'eps', 'gif', 'gif-alpha', 'm3u8', 'f4m');
+        return [
+            Formats::JPEG,
+            Formats::PNG,
+            Formats::PNG_ALPHA,
+            Formats::TIF,
+            Formats::TIF_ALPHA,
+            Formats::SWF,
+            Formats::SWF_ALPHA,
+            Formats::EPS,
+            Formats::GIF,
+            Formats::GIF_ALPHA,
+            Formats::M3U8,
+            Formats::F4M,
+        ];
     }
 
     public function getAllowedPixelTypes()

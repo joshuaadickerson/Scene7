@@ -12,7 +12,7 @@ trait Anchor
             $x = (int) $x;
             $y = (int) $y;
 
-            $this->addCommand(array('anchor' => $x . ',' . $y));
+            $this->addCommand(['anchor' => $x . ',' . $y]);
         }
 
         return $this;
@@ -23,7 +23,7 @@ trait Anchor
         $x = (float) $x;
         $y = (float) $y;
 
-        $this->addCommand(array('anchorN' => $x . ',' . $y));
+        $this->addCommand(['anchorN' => $x . ',' . $y]);
         return $this;
     }
 }

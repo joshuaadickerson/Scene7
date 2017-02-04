@@ -1,8 +1,9 @@
 <?php
 
-namespace Scene7;
+namespace Scene7\Commands;
 
 use Scene7\Commands\Layer as LayerCommand;
+use Scene7\RenderInterface;
 
 /**
  * Class Layer
@@ -10,17 +11,20 @@ use Scene7\Commands\Layer as LayerCommand;
  *
  * Layer is a special command because they have nested commands
  */
-class Layer
+class Layer implements RenderInterface
 {
     use LayerCommand\BackgroundColor,
         LayerCommand\BlendMode,
         LayerCommand\Blur,
         LayerCommand\Brightness,
+        LayerCommand\ClipPath,
         LayerCommand\Color,
         LayerCommand\ColorBalance,
+        LayerCommand\Colorize,
         LayerCommand\Effect,
         LayerCommand\Extend,
         LayerCommand\Flip,
+        LayerCommand\Grow,
         LayerCommand\Hide,
         LayerCommand\Hue,
         LayerCommand\Invert,
@@ -30,8 +34,15 @@ class Layer
         LayerCommand\Origin,
         LayerCommand\PathAttributes,
         LayerCommand\PathEmbed,
+        LayerCommand\Position,
         LayerCommand\Saturation,
-        LayerCommand\Sharpen;
+        LayerCommand\Sharpen,
+        LayerCommand\Text,
+        LayerCommand\TextAngle,
+        LayerCommand\TextAttributes,
+        LayerCommand\TextFlowPath,
+        LayerCommand\TextPath,
+        LayerCommand\TextPhotoshopCompatible;
 
     protected $id;
     protected $name;
@@ -64,53 +75,19 @@ class Layer
         return $this;
     }
 
-    public function __toString()
+    public function render()
     {
         return $this->getQuery();
     }
 
+    public function __toString()
+    {
+        return $this->render();
+    }
+
     /*
      * To implement
-     * bgColor
-     * blendmode
-     * clipPath
-     * clipXPath
-     * color
-     * effect
-     * extend
-     * flip
-     * hide
-     * layer
-     * map
-     * mask
-     * maskUse
-     * op_blur
-     * op_brightness
-     * op_colorbalance
-     * op_colorize
-     * op_contrast
-     * op_grow
-     * op_hue
-     * op_invert
-     * op_noise
-     * op_saturation
-     * op_sharpen
-     * op_usm
-     * opac
-     * origin
-     * pathAttr
-     * perspective
-     * pos
-     * rotate
-     * size
      * src
-     * text
-     * textAngle
-     * textAttr
-     * textFlowPath
-     * textFlowXPath
-     * textPath
-     * textPs
      *
      */
 }

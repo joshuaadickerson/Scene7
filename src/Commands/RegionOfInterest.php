@@ -13,7 +13,7 @@ trait RegionOfInterest
 
         $region = $coordX . ',' . $coordY . ',' . $sizeX . ',' . $sizeY;
 
-        $this->addCommand(array('rgn' => $region));
+        $this->addCommand(['rgn' => $region]);
         return $this;
     }
 }

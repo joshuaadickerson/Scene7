@@ -7,7 +7,7 @@ trait Timeout
     // from saveToFile req type
     public function setTimeout($milliseconds)
     {
-        $this->addCommand(array('timeout' => (int) $milliseconds));
+        $this->addCommand(['timeout' => (int) $milliseconds]);
         return $this;
     }
 }

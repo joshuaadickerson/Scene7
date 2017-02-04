@@ -25,5 +25,8 @@ final class Formats
     const SWF3_A        = 'swf3-alpha';
     const SWF3_ALPHA    = 'swf3-alpha';
     const M3U8          = 'm3u8';
-    const F4M       = 'f4m';
+    const EPS           = 'eps';
+    const GIF           = 'gif';
+    const GIF_ALPHA     = 'gif-alpha';
+    const F4M           = 'f4m';
 }

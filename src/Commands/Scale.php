@@ -11,7 +11,7 @@ trait Scale
             throw new \InvalidArgumentException('Factor must be greater than 0');
         }
 
-        $this->addCommand(array('scale' => $factor));
+        $this->addCommand(['scale' => $factor]);
         return $this;
     }
 }

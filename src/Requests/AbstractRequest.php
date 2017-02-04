@@ -13,6 +13,9 @@ abstract class AbstractRequest implements RenderInterface
     protected $factory;
     protected $protocol;
 
+    /**
+     * @return string
+     */
     abstract public function getRequestType();
 
     protected function setBaseUrl($baseUrl)
@@ -55,7 +58,7 @@ abstract class AbstractRequest implements RenderInterface
             ]);
         }
 
-        return base64_encode(urldecode(http_build_query($commands)));
+        return base64_encode(urldecode(http_build_query($commands)) . $this->renderLayers(true));
     }
 
     /**
@@ -71,7 +74,11 @@ abstract class AbstractRequest implements RenderInterface
 
     public function getUri($obscure = false)
     {
-        return ($this->protocol ?: '') . $this->baseUrl . $this->file . '?' . $this->getQuery($obscure);
+        return ($this->protocol ?: '')
+            . $this->baseUrl
+            . $this->file
+            . (!empty($this->responseType) ? ',' . $this->responseType : '')
+            . '?' . $this->getQuery($obscure);
     }
 
     public function setProtocol($protocol)

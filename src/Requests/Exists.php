@@ -11,6 +11,8 @@ class Exists extends AbstractRequest
 
     const ALLOWED_RESPONSE_TYPES = ['text', 'javascript', 'xml', 'json'];
 
+    protected $responseType;
+
     public function __construct($baseUrl, $file)
     {
         $this->setBaseUrl($baseUrl);

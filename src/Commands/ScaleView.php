@@ -11,7 +11,7 @@ trait ScaleView
             throw new \InvalidArgumentException('Factor must be greater than 0');
         }
 
-        $this->addCommand(array('scl' => $factor));
+        $this->addCommand(['scl' => $factor]);
         return $this;
     }
 }
