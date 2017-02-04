@@ -45,7 +45,7 @@ class Srcset implements RenderInterface
     {
         $srcset = '';
 
-        if (empty($this->multipliers)) {
+        if (!empty($this->multipliers)) {
             $images = $this->getMultipliedImages($this->image, $this->multipliers);
             foreach ($images as $multiplier => $multImage) {
                 $srcset .= $multImage->render() . ' ' . ((int) $multiplier) . 'x,';

@@ -4,7 +4,7 @@ namespace Scene7\Helpers\Html;
 
 use Scene7\Helpers\Html\Attributes\Srcset;
 use Scene7\Helpers\ImageMultiplier;
-use Scene7\Requests\Image;
+use Scene7\Requests;
 
 class Source extends AbstractTag
 {
@@ -15,7 +15,7 @@ class Source extends AbstractTag
         $this->setAttributes($attributes);
     }
 
-    public function createFromImage(Image $image, array $multipliers = [])
+    public function createFromImage(Requests\Image $image, array $multipliers = [])
     {
         return $this->setSrcset(new Srcset($image->render(), $image, $multipliers));
     }

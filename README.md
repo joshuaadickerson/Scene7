@@ -15,3 +15,8 @@ $callback = function (AbstractRequest $request) {
     }
 }
 ```
+
+## Helpers ##
+
+### Picture ###
+You can quickly create a picture tag with nested <source> and <img> tags.
