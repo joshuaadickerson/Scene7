@@ -2,7 +2,10 @@
   "name": "joshuaadickerson/scene7",
   "type": "standard",
   "description": "Adobe Scene7 PHP SDK",
-  "license": "CC-BY-SA-4.0",
+  "license": "BSD-3-Clause",
+  "authors": [{
+    "name": "Joshua Dickerson"
+  }],
   "autoload": {
     "psr-4": {
       "Scene7\\": "src/"
@@ -14,6 +17,7 @@
     }
   },
   "require-dev": {
-    "phpunit/phpunit": "5.5.*"
+    "phpunit/phpunit": "5.5.*",
+    "theseer/phpdox": "^0.9.0"
   }
 }
