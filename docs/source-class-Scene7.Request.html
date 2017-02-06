@@ -125,8 +125,8 @@
 </span><span id="4" class="l">
 </span><span id="5" class="l"><span class="php-keyword1">class</span> Request
 </span><span id="6" class="l">{
-</span><span id="7" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$commands</span> = <span class="php-keyword1">array</span>();
-</span><span id="8" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$layers</span> = <span class="php-keyword1">array</span>();
+</span><span id="7" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$commands</span> = [];
+</span><span id="8" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$layers</span>   = [];
 </span><span id="9" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$factory</span>;
 </span><span id="10" class="l">    <span class="php-keyword1">protected</span> <span class="php-var">$baseUrl</span>;
 </span><span id="11" class="l">
@@ -255,7 +255,7 @@
 </span><span id="134" class="l">
 </span><span id="135" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getAllowedFitModes()
 </span><span id="136" class="l">    {
-</span><span id="137" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(<span class="php-quote">'fit'</span>, <span class="php-quote">'constrain'</span>, <span class="php-quote">'crop'</span>, <span class="php-quote">'wrap'</span>, <span class="php-quote">'stretch'</span>, <span class="php-quote">'hfit'</span>, <span class="php-quote">'vfit'</span>);
+</span><span id="137" class="l">        <span class="php-keyword1">return</span> [<span class="php-quote">'fit'</span>, <span class="php-quote">'constrain'</span>, <span class="php-quote">'crop'</span>, <span class="php-quote">'wrap'</span>, <span class="php-quote">'stretch'</span>, <span class="php-quote">'hfit'</span>, <span class="php-quote">'vfit'</span>];
 </span><span id="138" class="l">    }
 </span><span id="139" class="l">
 </span><span id="140" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setFormat(<span class="php-var">$format</span>, <span class="php-var">$pixelType</span> = <span class="php-quote">''</span>, <span class="php-var">$compression</span> = <span class="php-quote">''</span>)
@@ -288,17 +288,17 @@
 </span><span id="167" class="l">
 </span><span id="168" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getAllowedFormats()
 </span><span id="169" class="l">    {
-</span><span id="170" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(<span class="php-quote">'jpeg'</span>, <span class="php-quote">'png'</span>, <span class="php-quote">'png-alpha'</span>, <span class="php-quote">'tif'</span>, <span class="php-quote">'tif-alpha'</span>, <span class="php-quote">'swf'</span>, <span class="php-quote">'swf-alpha'</span>, <span class="php-quote">'eps'</span>, <span class="php-quote">'gif'</span>, <span class="php-quote">'gif-alpha'</span>, <span class="php-quote">'m3u8'</span>, <span class="php-quote">'f4m'</span>);
+</span><span id="170" class="l">        <span class="php-keyword1">return</span> [<span class="php-quote">'jpeg'</span>, <span class="php-quote">'png'</span>, <span class="php-quote">'png-alpha'</span>, <span class="php-quote">'tif'</span>, <span class="php-quote">'tif-alpha'</span>, <span class="php-quote">'swf'</span>, <span class="php-quote">'swf-alpha'</span>, <span class="php-quote">'eps'</span>, <span class="php-quote">'gif'</span>, <span class="php-quote">'gif-alpha'</span>, <span class="php-quote">'m3u8'</span>, <span class="php-quote">'f4m'</span>];
 </span><span id="171" class="l">    }
 </span><span id="172" class="l">
 </span><span id="173" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getAllowedPixelTypes()
 </span><span id="174" class="l">    {
-</span><span id="175" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(<span class="php-quote">'rgb'</span>, <span class="php-quote">'gray'</span>, <span class="php-quote">'cmyk'</span>);
+</span><span id="175" class="l">        <span class="php-keyword1">return</span> [<span class="php-quote">'rgb'</span>, <span class="php-quote">'gray'</span>, <span class="php-quote">'cmyk'</span>];
 </span><span id="176" class="l">    }
 </span><span id="177" class="l">
 </span><span id="178" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getAllowedCompressionTypes()
 </span><span id="179" class="l">    {
-</span><span id="180" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(<span class="php-quote">'none'</span>, <span class="php-quote">'lzw'</span>, <span class="php-quote">'zip'</span>, <span class="php-quote">'jpeg'</span>);
+</span><span id="180" class="l">        <span class="php-keyword1">return</span> [<span class="php-quote">'none'</span>, <span class="php-quote">'lzw'</span>, <span class="php-quote">'zip'</span>, <span class="php-quote">'jpeg'</span>];
 </span><span id="181" class="l">    }
 </span><span id="182" class="l">
 </span><span id="183" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setHeight(<span class="php-var">$height</span>)
@@ -862,6 +862,6 @@
 </div>
 </div>
 <script src="resources/combined.js?9dec6df73f4b73143a1c5eb8561f67c6e84ce5bf"></script>
-<script src="elementlist.js?b768be19a3b244695d4593768ac87acc651b26b6"></script>
+<script src="elementlist.js?9a42a61d94bab8cf8a50d623f80f9f34883fcaed"></script>
 </body>
 </html>

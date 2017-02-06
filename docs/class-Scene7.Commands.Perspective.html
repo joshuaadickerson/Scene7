@@ -98,6 +98,7 @@
 				<li><a href="class-Scene7.Commands.Mask.html">Mask</a></li>
 				<li><a href="class-Scene7.Commands.MaskUse.html">MaskUse</a></li>
 				<li><a href="class-Scene7.Commands.MaxJpegSize.html">MaxJpegSize</a></li>
+				<li><a href="class-Scene7.Commands.Message.html">Message</a></li>
 				<li><a href="class-Scene7.Commands.Name.html">Name</a></li>
 				<li><a href="class-Scene7.Commands.OutputColorProfile.html">OutputColorProfile</a></li>
 				<li class="active"><a href="class-Scene7.Commands.Perspective.html">Perspective</a></li>
@@ -170,7 +171,7 @@
 		<b>Namespace:</b> <a href="namespace-Scene7.html">Scene7</a>\<a href="namespace-Scene7.Commands.html">Commands</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Scene7.Commands.Perspective.html#7-50" title="Go to source code">Commands/Perspective.php</a>
+			<b>Located at</b> <a href="source-class-Scene7.Commands.Perspective.html#7-74" title="Go to source code">Commands/Perspective.php</a>
 		<br>
 	</div>
 
@@ -183,14 +184,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Scene7.Commands.Perspective.html">Scene7\Commands\Perspective</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setPerspective">#</a>
-		<code><a href="source-class-Scene7.Commands.Perspective.html#9-24" title="Go to source code">setPerspective</a>( <span> <var>$topLeft</var></span>, <span> <var>$topRight</var></span>, <span> <var>$bottomLeft</var></span>, <span> <var>$bottomRight</var></span>, <span> <var>$resamplingMode</var> = <span class="php-keyword1">null</span></span>, <span> <var>$normalized</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Scene7.Commands.Perspective.html#9-33" title="Go to source code">setPerspective</a>( <span>float <var>$topLeft</var></span>, <span>float <var>$topRight</var></span>, <span>float <var>$bottomLeft</var></span>, <span>float <var>$bottomRight</var></span>, <span>string|null <var>$resamplingMode</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$normalized</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			
@@ -200,7 +201,26 @@
 			
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$topLeft</var></dt>
+					<dd></dd>
+					<dt><var>$topRight</var></dt>
+					<dd></dd>
+					<dt><var>$bottomLeft</var></dt>
+					<dd></dd>
+					<dt><var>$bottomRight</var></dt>
+					<dd></dd>
+					<dt><var>$resamplingMode</var></dt>
+					<dd>One of Definitions\ResamplingModes</dd>
+					<dt><var>$normalized</var></dt>
+					<dd></dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Scene7.Commands.Perspective.html">Scene7\Commands\Perspective</a></code><br>$this
+				</div>
 
 
 
@@ -213,14 +233,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Scene7.Commands.Perspective.html">Scene7\Commands\Perspective</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setPerspectiveNormalized">#</a>
-		<code><a href="source-class-Scene7.Commands.Perspective.html#26-29" title="Go to source code">setPerspectiveNormalized</a>( <span> <var>$topLeft</var></span>, <span> <var>$topRight</var></span>, <span> <var>$bottomLeft</var></span>, <span> <var>$bottomRight</var></span>, <span> <var>$resamplingMode</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Scene7.Commands.Perspective.html#35-46" title="Go to source code">setPerspectiveNormalized</a>( <span>float <var>$topLeft</var></span>, <span>float <var>$topRight</var></span>, <span>float <var>$bottomLeft</var></span>, <span>float <var>$bottomRight</var></span>, <span>string|null <var>$resamplingMode</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -230,7 +250,24 @@
 			
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$topLeft</var></dt>
+					<dd></dd>
+					<dt><var>$topRight</var></dt>
+					<dd></dd>
+					<dt><var>$bottomLeft</var></dt>
+					<dd></dd>
+					<dt><var>$bottomRight</var></dt>
+					<dd></dd>
+					<dt><var>$resamplingMode</var></dt>
+					<dd>One of Definitions\ResamplingModes</dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Scene7.Commands.Perspective.html">Scene7\Commands\Perspective</a></code><br>$this
+				</div>
 
 
 
@@ -243,14 +280,14 @@
 		<td class="attributes"><code>
 			 protected 
 
-			
+			boolean
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isAllowedPerspectiveResamplingMode">#</a>
-		<code><a href="source-class-Scene7.Commands.Perspective.html#31-40" title="Go to source code">isAllowedPerspectiveResamplingMode</a>( <span> <var>$mode</var></span> )</code>
+		<code><a href="source-class-Scene7.Commands.Perspective.html#48-61" title="Go to source code">isAllowedPerspectiveResamplingMode</a>( <span>string <var>$mode</var></span> )</code>
 
 		<div class="description short">
 			
@@ -260,7 +297,16 @@
 			
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mode</var></dt>
+					<dd></dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
 
 
 
@@ -273,14 +319,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			string[]
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getAllowedPerspectiveResamplingMode">#</a>
-		<code><a href="source-class-Scene7.Commands.Perspective.html#42-49" title="Go to source code">getAllowedPerspectiveResamplingMode</a>( )</code>
+		<code><a href="source-class-Scene7.Commands.Perspective.html#63-73" title="Go to source code">getAllowedPerspectiveResamplingMode</a>( )</code>
 
 		<div class="description short">
 			
@@ -291,6 +337,10 @@
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					string[]
+				</div>
 
 
 
@@ -325,6 +375,6 @@
 </div>
 </div>
 <script src="resources/combined.js?9dec6df73f4b73143a1c5eb8561f67c6e84ce5bf"></script>
-<script src="elementlist.js?b768be19a3b244695d4593768ac87acc651b26b6"></script>
+<script src="elementlist.js?9a42a61d94bab8cf8a50d623f80f9f34883fcaed"></script>
 </body>
 </html>

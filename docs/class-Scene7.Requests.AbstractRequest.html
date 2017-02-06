@@ -75,10 +75,20 @@
 			<h3>Classes</h3>
 			<ul>
 				<li class="active"><a href="class-Scene7.Requests.AbstractRequest.html">AbstractRequest</a></li>
+				<li><a href="class-Scene7.Requests.CatalogProps.html">CatalogProps</a></li>
 				<li><a href="class-Scene7.Requests.Exists.html">Exists</a></li>
 				<li><a href="class-Scene7.Requests.Image.html">Image</a></li>
 				<li><a href="class-Scene7.Requests.ImageProps.html">ImageProps</a></li>
 				<li><a href="class-Scene7.Requests.ImageSet.html">ImageSet</a></li>
+				<li><a href="class-Scene7.Requests.LoadCache.html">LoadCache</a></li>
+				<li><a href="class-Scene7.Requests.Map.html">Map</a></li>
+				<li><a href="class-Scene7.Requests.Mask.html">Mask</a></li>
+				<li><a href="class-Scene7.Requests.Message.html">Message</a></li>
+				<li><a href="class-Scene7.Requests.Properties.html">Properties</a></li>
+				<li><a href="class-Scene7.Requests.Resolve.html">Resolve</a></li>
+				<li><a href="class-Scene7.Requests.SaveToFile.html">SaveToFile</a></li>
+				<li><a href="class-Scene7.Requests.Thumbnail.html">Thumbnail</a></li>
+				<li><a href="class-Scene7.Requests.Validate.html">Validate</a></li>
 			</ul>
 
 
@@ -134,10 +144,20 @@
 
 	<div>
 		<h4>Direct known subclasses</h4>
+			<a href="class-Scene7.Requests.CatalogProps.html">Scene7\Requests\CatalogProps</a>, 
 			<a href="class-Scene7.Requests.Exists.html">Scene7\Requests\Exists</a>, 
+			<a href="class-Scene7.Requests.Resolve.html">Scene7\Requests\Resolve</a>, 
+			<a href="class-Scene7.Requests.SaveToFile.html">Scene7\Requests\SaveToFile</a>, 
+			<a href="class-Scene7.Requests.Thumbnail.html">Scene7\Requests\Thumbnail</a>, 
+			<a href="class-Scene7.Requests.Validate.html">Scene7\Requests\Validate</a>, 
 			<a href="class-Scene7.Requests.Image.html">Scene7\Requests\Image</a>, 
 			<a href="class-Scene7.Requests.ImageProps.html">Scene7\Requests\ImageProps</a>, 
-			<a href="class-Scene7.Requests.ImageSet.html">Scene7\Requests\ImageSet</a>
+			<a href="class-Scene7.Requests.ImageSet.html">Scene7\Requests\ImageSet</a>, 
+			<a href="class-Scene7.Requests.LoadCache.html">Scene7\Requests\LoadCache</a>, 
+			<a href="class-Scene7.Requests.Map.html">Scene7\Requests\Map</a>, 
+			<a href="class-Scene7.Requests.Mask.html">Scene7\Requests\Mask</a>, 
+			<a href="class-Scene7.Requests.Message.html">Scene7\Requests\Message</a>, 
+			<a href="class-Scene7.Requests.Properties.html">Scene7\Requests\Properties</a>
 	</div>
 
 
@@ -151,7 +171,7 @@
 		<b>Namespace:</b> <a href="namespace-Scene7.html">Scene7</a>\<a href="namespace-Scene7.Requests.html">Requests</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Scene7.Requests.AbstractRequest.html#8-100" title="Go to source code">Requests/AbstractRequest.php</a>
+			<b>Located at</b> <a href="source-class-Scene7.Requests.AbstractRequest.html#8-159" title="Go to source code">Requests/AbstractRequest.php</a>
 		<br>
 	</div>
 
@@ -171,7 +191,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getRequestType">#</a>
-		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#16-19" title="Go to source code">getRequestType</a>( )</code>
+		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#25-28" title="Go to source code">getRequestType</a>( )</code>
 
 		<div class="description short">
 			
@@ -205,7 +225,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setBaseUrl">#</a>
-		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#21-25" title="Go to source code">setBaseUrl</a>( <span> <var>$baseUrl</var></span> )</code>
+		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#30-34" title="Go to source code">setBaseUrl</a>( <span> <var>$baseUrl</var></span> )</code>
 
 		<div class="description short">
 			
@@ -235,7 +255,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addCommand">#</a>
-		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#27-31" title="Go to source code">addCommand</a>( <span>array <var>$commands</var></span> )</code>
+		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#36-40" title="Go to source code">addCommand</a>( <span>array <var>$commands</var></span> )</code>
 
 		<div class="description short">
 			
@@ -258,14 +278,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			array
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCommands">#</a>
-		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#33-36" title="Go to source code">getCommands</a>( )</code>
+		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#42-48" title="Go to source code">getCommands</a>( )</code>
 
 		<div class="description short">
 			
@@ -276,6 +296,10 @@
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
 
 
 
@@ -288,14 +312,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			string
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getQuery">#</a>
-		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#38-47" title="Go to source code">getQuery</a>( <span> <var>$obscure</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#50-63" title="Go to source code">getQuery</a>( <span>boolean <var>$obscure</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			
@@ -305,7 +329,16 @@
 			
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$obscure</var></dt>
+					<dd></dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
 
 
 
@@ -318,14 +351,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			string
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getObscuredQuery">#</a>
-		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#50-62" title="Go to source code">getObscuredQuery</a>( )</code>
+		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#65-81" title="Go to source code">getObscuredQuery</a>( )</code>
 
 		<div class="description short">
 			
@@ -336,6 +369,10 @@
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
 
 
 
@@ -355,7 +392,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render">#</a>
-		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#64-73" title="Go to source code">render</a>( <span>boolean <var>$obscure</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#83-92" title="Go to source code">render</a>( <span>boolean <var>$obscure</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>A wrapper for getUri()</p>
@@ -389,14 +426,53 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			string
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getUri">#</a>
-		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#75-82" title="Go to source code">getUri</a>( <span> <var>$obscure</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#94-106" title="Go to source code">getUri</a>( <span>boolean <var>$obscure</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$obscure</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="renderRequestType" id="_renderRequestType">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_renderRequestType">#</a>
+		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#108-127" title="Go to source code">renderRequestType</a>( )</code>
 
 		<div class="description short">
 			
@@ -419,14 +495,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Scene7.Requests.AbstractRequest.html">Scene7\Requests\AbstractRequest</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setProtocol">#</a>
-		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#84-88" title="Go to source code">setProtocol</a>( <span> <var>$protocol</var></span> )</code>
+		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#129-137" title="Go to source code">setProtocol</a>( <span>string <var>$protocol</var></span> )</code>
 
 		<div class="description short">
 			
@@ -436,7 +512,16 @@
 			
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$protocol</var></dt>
+					<dd></dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Scene7.Requests.AbstractRequest.html">Scene7\Requests\AbstractRequest</a></code><br>$this
+				</div>
 
 
 
@@ -456,7 +541,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___toString">#</a>
-		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#90-93" title="Go to source code">__toString</a>( )</code>
+		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#139-142" title="Go to source code">__toString</a>( )</code>
 
 		<div class="description short">
 			
@@ -492,7 +577,67 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setFactory">#</a>
-		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#95-99" title="Go to source code">setFactory</a>( <span><code><a href="class-Scene7.Factory.html">Scene7\Factory</a></code> <var>$factory</var></span> )</code>
+		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#144-148" title="Go to source code">setFactory</a>( <span><code><a href="class-Scene7.Factory.html">Scene7\Factory</a></code> <var>$factory</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAllowedResponseTypes" id="_getAllowedResponseTypes">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAllowedResponseTypes">#</a>
+		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#150-153" title="Go to source code">getAllowedResponseTypes</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAllowedEncodings" id="_getAllowedEncodings">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAllowedEncodings">#</a>
+		<code><a href="source-class-Scene7.Requests.AbstractRequest.html#155-158" title="Go to source code">getAllowedEncodings</a>( )</code>
 
 		<div class="description short">
 			
@@ -528,11 +673,11 @@
 	<tr data-order="baseUrl" id="$baseUrl">
 		<td class="attributes"><code>
 			protected  
-			
+			string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Scene7.Requests.AbstractRequest.html#10" title="Go to source code"><var>$baseUrl</var></a>
+				<a href="source-class-Scene7.Requests.AbstractRequest.html#10-11" title="Go to source code"><var>$baseUrl</var></a>
 
 			<div class="description short">
 				
@@ -546,18 +691,18 @@
 		<td class="value">
 			<div>
 				<a href="#$baseUrl" class="anchor">#</a>
-				<code></code>
+				<code><span class="php-quote">''</span></code>
 			</div>
 		</td>
 	</tr>
 	<tr data-order="file" id="$file">
 		<td class="attributes"><code>
 			protected  
-			
+			string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Scene7.Requests.AbstractRequest.html#11" title="Go to source code"><var>$file</var></a>
+				<a href="source-class-Scene7.Requests.AbstractRequest.html#12-13" title="Go to source code"><var>$file</var></a>
 
 			<div class="description short">
 				
@@ -571,7 +716,7 @@
 		<td class="value">
 			<div>
 				<a href="#$file" class="anchor">#</a>
-				<code></code>
+				<code><span class="php-quote">''</span></code>
 			</div>
 		</td>
 	</tr>
@@ -582,7 +727,7 @@
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Scene7.Requests.AbstractRequest.html#12" title="Go to source code"><var>$commands</var></a>
+				<a href="source-class-Scene7.Requests.AbstractRequest.html#14-15" title="Go to source code"><var>$commands</var></a>
 
 			<div class="description short">
 				
@@ -596,18 +741,18 @@
 		<td class="value">
 			<div>
 				<a href="#$commands" class="anchor">#</a>
-				<code><span class="php-keyword1">array</span>()</code>
+				<code>[]</code>
 			</div>
 		</td>
 	</tr>
 	<tr data-order="factory" id="$factory">
 		<td class="attributes"><code>
 			protected  
-			
+			<code><a href="class-Scene7.Factory.html">Scene7\Factory</a></code>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Scene7.Requests.AbstractRequest.html#13" title="Go to source code"><var>$factory</var></a>
+				<a href="source-class-Scene7.Requests.AbstractRequest.html#16-17" title="Go to source code"><var>$factory</var></a>
 
 			<div class="description short">
 				
@@ -628,11 +773,11 @@
 	<tr data-order="protocol" id="$protocol">
 		<td class="attributes"><code>
 			protected  
-			
+			string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Scene7.Requests.AbstractRequest.html#14" title="Go to source code"><var>$protocol</var></a>
+				<a href="source-class-Scene7.Requests.AbstractRequest.html#18-19" title="Go to source code"><var>$protocol</var></a>
 
 			<div class="description short">
 				
@@ -646,7 +791,57 @@
 		<td class="value">
 			<div>
 				<a href="#$protocol" class="anchor">#</a>
-				<code></code>
+				<code><span class="php-quote">''</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="responseType" id="$responseType">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Scene7.Requests.AbstractRequest.html#20-21" title="Go to source code"><var>$responseType</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$responseType" class="anchor">#</a>
+				<code><span class="php-quote">''</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="encoding" id="$encoding">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Scene7.Requests.AbstractRequest.html#22-23" title="Go to source code"><var>$encoding</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$encoding" class="anchor">#</a>
+				<code><span class="php-quote">''</span></code>
 			</div>
 		</td>
 	</tr>
@@ -665,6 +860,6 @@
 </div>
 </div>
 <script src="resources/combined.js?9dec6df73f4b73143a1c5eb8561f67c6e84ce5bf"></script>
-<script src="elementlist.js?b768be19a3b244695d4593768ac87acc651b26b6"></script>
+<script src="elementlist.js?9a42a61d94bab8cf8a50d623f80f9f34883fcaed"></script>
 </body>
 </html>

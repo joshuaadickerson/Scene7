@@ -16,6 +16,7 @@ class Thumbnail extends AbstractRequest
         Commands\DefaultImage,
         Commands\EmbedColorProfile,
         Commands\EmbedPathData,
+        Commands\Fit,
         Commands\Format,
         Commands\Height,
         Commands\Id,
@@ -23,7 +24,6 @@ class Thumbnail extends AbstractRequest
         Commands\Locale,
         Commands\Mask,
         Commands\MaskUse,
-        Commands\Name,
         Commands\OutputColorProfile,
         Commands\PrintResolution,
         Commands\Quality,
@@ -33,21 +33,19 @@ class Thumbnail extends AbstractRequest
         Commands\Scale,
         Commands\ScaleView,
         Commands\Template,
-        Commands\Timeout,
         Commands\Type,
         Commands\ViewRectangle,
         Commands\Width,
         Commands\XmpEmbed;
 
-    public function __construct($baseUrl, $file, $name)
+    public function __construct($baseUrl, $file)
     {
         $this->setBaseUrl($baseUrl);
         $this->file = $file;
-        $this->setName($name);
     }
 
     public function getRequestType()
     {
-        return 'saveToFile';
+        return 'tmb';
     }
 }

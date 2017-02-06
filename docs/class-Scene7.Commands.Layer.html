@@ -98,6 +98,7 @@
 				<li><a href="class-Scene7.Commands.Mask.html">Mask</a></li>
 				<li><a href="class-Scene7.Commands.MaskUse.html">MaskUse</a></li>
 				<li><a href="class-Scene7.Commands.MaxJpegSize.html">MaxJpegSize</a></li>
+				<li><a href="class-Scene7.Commands.Message.html">Message</a></li>
 				<li><a href="class-Scene7.Commands.Name.html">Name</a></li>
 				<li><a href="class-Scene7.Commands.OutputColorProfile.html">OutputColorProfile</a></li>
 				<li><a href="class-Scene7.Commands.Perspective.html">Perspective</a></li>
@@ -156,7 +157,7 @@
 
 
 	<div class="description">
-	<p>Class Layer</p>
+	<p>Layer is a special command because it has nested commands</p>
 	</div>
 
 	<dl class="tree">
@@ -242,9 +243,9 @@
 		
 		
 		<b>Namespace:</b> <a href="namespace-Scene7.html">Scene7</a>\<a href="namespace-Scene7.Commands.html">Commands</a><br>
-		<b>Package:</b> Scene7<br>
+		
 
-			<b>Located at</b> <a href="source-class-Scene7.Commands.Layer.html#8-88" title="Go to source code">Commands/Layer.php</a>
+			<b>Located at</b> <a href="source-class-Scene7.Commands.Layer.html#8-93" title="Go to source code">Commands/Layer.php</a>
 		<br>
 	</div>
 
@@ -264,16 +265,23 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Scene7.Commands.Layer.html#52-56" title="Go to source code">__construct</a>( <span> <var>$id</var></span>, <span> <var>$name</var></span> )</code>
+		<code><a href="source-class-Scene7.Commands.Layer.html#52-61" title="Go to source code">__construct</a>( <span>integer|string <var>$id</var></span>, <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>Layer constructor.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Layer constructor.</p>
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd></dd>
+					<dt><var>$name</var></dt>
+					<dd></dd>
+				</dl></div>
 
 
 
@@ -294,7 +302,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getId">#</a>
-		<code><a href="source-class-Scene7.Commands.Layer.html#58-61" title="Go to source code">getId</a>( )</code>
+		<code><a href="source-class-Scene7.Commands.Layer.html#63-66" title="Go to source code">getId</a>( )</code>
 
 		<div class="description short">
 			
@@ -324,7 +332,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCommands">#</a>
-		<code><a href="source-class-Scene7.Commands.Layer.html#63-66" title="Go to source code">getCommands</a>( )</code>
+		<code><a href="source-class-Scene7.Commands.Layer.html#68-71" title="Go to source code">getCommands</a>( )</code>
 
 		<div class="description short">
 			
@@ -354,7 +362,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getQuery">#</a>
-		<code><a href="source-class-Scene7.Commands.Layer.html#68-71" title="Go to source code">getQuery</a>( )</code>
+		<code><a href="source-class-Scene7.Commands.Layer.html#73-76" title="Go to source code">getQuery</a>( )</code>
 
 		<div class="description short">
 			
@@ -384,7 +392,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addCommand">#</a>
-		<code><a href="source-class-Scene7.Commands.Layer.html#73-77" title="Go to source code">addCommand</a>( <span>array <var>$commands</var></span> )</code>
+		<code><a href="source-class-Scene7.Commands.Layer.html#78-82" title="Go to source code">addCommand</a>( <span>array <var>$commands</var></span> )</code>
 
 		<div class="description short">
 			
@@ -414,7 +422,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render">#</a>
-		<code><a href="source-class-Scene7.Commands.Layer.html#79-82" title="Go to source code">render</a>( )</code>
+		<code><a href="source-class-Scene7.Commands.Layer.html#84-87" title="Go to source code">render</a>( )</code>
 
 		<div class="description short">
 			
@@ -450,7 +458,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___toString">#</a>
-		<code><a href="source-class-Scene7.Commands.Layer.html#84-87" title="Go to source code">__toString</a>( )</code>
+		<code><a href="source-class-Scene7.Commands.Layer.html#89-92" title="Go to source code">__toString</a>( )</code>
 
 		<div class="description short">
 			
@@ -752,11 +760,11 @@
 	<tr data-order="id" id="$id">
 		<td class="attributes"><code>
 			protected  
-			
+			integer|string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Scene7.Commands.Layer.html#48" title="Go to source code"><var>$id</var></a>
+				<a href="source-class-Scene7.Commands.Layer.html#45-46" title="Go to source code"><var>$id</var></a>
 
 			<div class="description short">
 				
@@ -777,11 +785,11 @@
 	<tr data-order="name" id="$name">
 		<td class="attributes"><code>
 			protected  
-			
+			string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Scene7.Commands.Layer.html#49" title="Go to source code"><var>$name</var></a>
+				<a href="source-class-Scene7.Commands.Layer.html#47-48" title="Go to source code"><var>$name</var></a>
 
 			<div class="description short">
 				
@@ -802,11 +810,11 @@
 	<tr data-order="commands" id="$commands">
 		<td class="attributes"><code>
 			protected  
-			array
+			string[]
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Scene7.Commands.Layer.html#50" title="Go to source code"><var>$commands</var></a>
+				<a href="source-class-Scene7.Commands.Layer.html#49-50" title="Go to source code"><var>$commands</var></a>
 
 			<div class="description short">
 				
@@ -820,7 +828,7 @@
 		<td class="value">
 			<div>
 				<a href="#$commands" class="anchor">#</a>
-				<code><span class="php-keyword1">array</span>()</code>
+				<code>[]</code>
 			</div>
 		</td>
 	</tr>
@@ -839,6 +847,6 @@
 </div>
 </div>
 <script src="resources/combined.js?9dec6df73f4b73143a1c5eb8561f67c6e84ce5bf"></script>
-<script src="elementlist.js?b768be19a3b244695d4593768ac87acc651b26b6"></script>
+<script src="elementlist.js?9a42a61d94bab8cf8a50d623f80f9f34883fcaed"></script>
 </body>
 </html>

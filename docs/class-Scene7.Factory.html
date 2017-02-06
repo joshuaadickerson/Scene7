@@ -136,7 +136,7 @@
 		<b>Namespace:</b> <a href="namespace-Scene7.html">Scene7</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Scene7.Factory.html#8-84" title="Go to source code">Factory.php</a>
+			<b>Located at</b> <a href="source-class-Scene7.Factory.html#8-104" title="Go to source code">Factory.php</a>
 		<br>
 	</div>
 
@@ -156,7 +156,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Scene7.Factory.html#14-25" title="Go to source code">__construct</a>( <span>string <var>$baseUrl</var></span>, <span>callable <var>$defaultsCallback</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Scene7.Factory.html#17-28" title="Go to source code">__construct</a>( <span>string <var>$baseUrl</var></span>, <span>callable <var>$defaultsCallback</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -186,14 +186,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Scene7.Requests.Image.html">Scene7\Requests\Image</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_newImage">#</a>
-		<code><a href="source-class-Scene7.Factory.html#27-34" title="Go to source code">newImage</a>( <span> <var>$file</var></span> )</code>
+		<code><a href="source-class-Scene7.Factory.html#30-41" title="Go to source code">newImage</a>( <span>string <var>$file</var></span> )</code>
 
 		<div class="description short">
 			
@@ -203,7 +203,16 @@
 			
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd></dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Scene7.Requests.Image.html">Scene7\Requests\Image</a></code>
+				</div>
 
 
 
@@ -216,14 +225,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Scene7.Commands.Layer.html">Scene7\Commands\Layer</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_newLayer">#</a>
-		<code><a href="source-class-Scene7.Factory.html#36-41" title="Go to source code">newLayer</a>( <span> <var>$id</var></span>, <span> <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Scene7.Factory.html#43-53" title="Go to source code">newLayer</a>( <span>integer|string <var>$id</var></span>, <span>string|null <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -233,7 +242,18 @@
 			
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd></dd>
+					<dt><var>$name</var></dt>
+					<dd></dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Scene7.Commands.Layer.html">Scene7\Commands\Layer</a></code>
+				</div>
 
 
 
@@ -246,14 +266,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Scene7.Factory.html">Scene7\Factory</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setBaseUrl">#</a>
-		<code><a href="source-class-Scene7.Factory.html#43-51" title="Go to source code">setBaseUrl</a>( <span> <var>$baseUrl</var></span> )</code>
+		<code><a href="source-class-Scene7.Factory.html#55-67" title="Go to source code">setBaseUrl</a>( <span>string <var>$baseUrl</var></span> )</code>
 
 		<div class="description short">
 			
@@ -263,7 +283,16 @@
 			
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$baseUrl</var></dt>
+					<dd></dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Scene7.Factory.html">Scene7\Factory</a></code><br>$this
+				</div>
 
 
 
@@ -276,14 +305,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Scene7.Factory.html">Scene7\Factory</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setProtocol">#</a>
-		<code><a href="source-class-Scene7.Factory.html#53-57" title="Go to source code">setProtocol</a>( <span> <var>$protocol</var></span> )</code>
+		<code><a href="source-class-Scene7.Factory.html#69-77" title="Go to source code">setProtocol</a>( <span>string <var>$protocol</var></span> )</code>
 
 		<div class="description short">
 			
@@ -293,7 +322,16 @@
 			
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$protocol</var></dt>
+					<dd></dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Scene7.Factory.html">Scene7\Factory</a></code><br>$this
+				</div>
 
 
 
@@ -313,7 +351,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setDefaultsCallback">#</a>
-		<code><a href="source-class-Scene7.Factory.html#59-63" title="Go to source code">setDefaultsCallback</a>( <span>callable <var>$callback</var></span> )</code>
+		<code><a href="source-class-Scene7.Factory.html#79-83" title="Go to source code">setDefaultsCallback</a>( <span>callable <var>$callback</var></span> )</code>
 
 		<div class="description short">
 			
@@ -343,7 +381,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#__setNewRequestDefaults">#</a>
-		<code><a href="source-class-Scene7.Factory.html#65-73" title="Go to source code">_setNewRequestDefaults</a>( <span><code><a href="class-Scene7.Requests.AbstractRequest.html">Scene7\Requests\AbstractRequest</a></code> <var>$request</var></span> )</code>
+		<code><a href="source-class-Scene7.Factory.html#85-93" title="Go to source code">_setNewRequestDefaults</a>( <span><code><a href="class-Scene7.Requests.AbstractRequest.html">Scene7\Requests\AbstractRequest</a></code> <var>$request</var></span> )</code>
 
 		<div class="description short">
 			
@@ -373,7 +411,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#__setNewLayerDefaults">#</a>
-		<code><a href="source-class-Scene7.Factory.html#75-83" title="Go to source code">_setNewLayerDefaults</a>( <span><code><a href="class-Scene7.Commands.Layer.html">Scene7\Commands\Layer</a></code> <var>$layer</var></span> )</code>
+		<code><a href="source-class-Scene7.Factory.html#95-103" title="Go to source code">_setNewLayerDefaults</a>( <span><code><a href="class-Scene7.Commands.Layer.html">Scene7\Commands\Layer</a></code> <var>$layer</var></span> )</code>
 
 		<div class="description short">
 			
@@ -409,11 +447,11 @@
 	<tr data-order="baseUrl" id="$baseUrl">
 		<td class="attributes"><code>
 			protected  
-			
+			string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Scene7.Factory.html#10" title="Go to source code"><var>$baseUrl</var></a>
+				<a href="source-class-Scene7.Factory.html#10-11" title="Go to source code"><var>$baseUrl</var></a>
 
 			<div class="description short">
 				
@@ -434,11 +472,11 @@
 	<tr data-order="defaultsCallback" id="$defaultsCallback">
 		<td class="attributes"><code>
 			protected  
-			
+			callable
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Scene7.Factory.html#11" title="Go to source code"><var>$defaultsCallback</var></a>
+				<a href="source-class-Scene7.Factory.html#12-13" title="Go to source code"><var>$defaultsCallback</var></a>
 
 			<div class="description short">
 				
@@ -459,11 +497,11 @@
 	<tr data-order="layerDefaultsCallback" id="$layerDefaultsCallback">
 		<td class="attributes"><code>
 			protected  
-			
+			callable
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Scene7.Factory.html#12" title="Go to source code"><var>$layerDefaultsCallback</var></a>
+				<a href="source-class-Scene7.Factory.html#14-15" title="Go to source code"><var>$layerDefaultsCallback</var></a>
 
 			<div class="description short">
 				
@@ -496,6 +534,6 @@
 </div>
 </div>
 <script src="resources/combined.js?9dec6df73f4b73143a1c5eb8561f67c6e84ce5bf"></script>
-<script src="elementlist.js?b768be19a3b244695d4593768ac87acc651b26b6"></script>
+<script src="elementlist.js?9a42a61d94bab8cf8a50d623f80f9f34883fcaed"></script>
 </body>
 </html>

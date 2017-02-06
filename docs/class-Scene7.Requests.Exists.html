@@ -75,10 +75,20 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Scene7.Requests.AbstractRequest.html">AbstractRequest</a></li>
+				<li><a href="class-Scene7.Requests.CatalogProps.html">CatalogProps</a></li>
 				<li class="active"><a href="class-Scene7.Requests.Exists.html">Exists</a></li>
 				<li><a href="class-Scene7.Requests.Image.html">Image</a></li>
 				<li><a href="class-Scene7.Requests.ImageProps.html">ImageProps</a></li>
 				<li><a href="class-Scene7.Requests.ImageSet.html">ImageSet</a></li>
+				<li><a href="class-Scene7.Requests.LoadCache.html">LoadCache</a></li>
+				<li><a href="class-Scene7.Requests.Map.html">Map</a></li>
+				<li><a href="class-Scene7.Requests.Mask.html">Mask</a></li>
+				<li><a href="class-Scene7.Requests.Message.html">Message</a></li>
+				<li><a href="class-Scene7.Requests.Properties.html">Properties</a></li>
+				<li><a href="class-Scene7.Requests.Resolve.html">Resolve</a></li>
+				<li><a href="class-Scene7.Requests.SaveToFile.html">SaveToFile</a></li>
+				<li><a href="class-Scene7.Requests.Thumbnail.html">Thumbnail</a></li>
+				<li><a href="class-Scene7.Requests.Validate.html">Validate</a></li>
 			</ul>
 
 
@@ -155,7 +165,7 @@
 		<b>Namespace:</b> <a href="namespace-Scene7.html">Scene7</a>\<a href="namespace-Scene7.Requests.html">Requests</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Scene7.Requests.Exists.html#7-27" title="Go to source code">Requests/Exists.php</a>
+			<b>Located at</b> <a href="source-class-Scene7.Requests.Exists.html#8-34" title="Go to source code">Requests/Exists.php</a>
 		<br>
 	</div>
 
@@ -175,7 +185,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Scene7.Requests.Exists.html#16-21" title="Go to source code">__construct</a>( <span> <var>$baseUrl</var></span>, <span> <var>$file</var></span> )</code>
+		<code><a href="source-class-Scene7.Requests.Exists.html#13-18" title="Go to source code">__construct</a>( <span> <var>$baseUrl</var></span>, <span> <var>$file</var></span> )</code>
 
 		<div class="description short">
 			
@@ -205,7 +215,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getRequestType">#</a>
-		<code><a href="source-class-Scene7.Requests.Exists.html#23-26" title="Go to source code">getRequestType</a>( )</code>
+		<code><a href="source-class-Scene7.Requests.Exists.html#20-23" title="Go to source code">getRequestType</a>( )</code>
 
 		<div class="description short">
 			
@@ -227,6 +237,38 @@
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="getAllowedResponseTypes" id="_getAllowedResponseTypes">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAllowedResponseTypes">#</a>
+		<code><a href="source-class-Scene7.Requests.Exists.html#25-33" title="Go to source code">getAllowedResponseTypes</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-Scene7.Requests.AbstractRequest.html#_getAllowedResponseTypes">Scene7\Requests\AbstractRequest::getAllowedResponseTypes()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
 	</table>
 
 	<table class="summary inherited">
@@ -235,11 +277,13 @@
 		<td><code>
 			<a href="class-Scene7.Requests.AbstractRequest.html#___toString">__toString()</a>, 
 			<a href="class-Scene7.Requests.AbstractRequest.html#_addCommand">addCommand()</a>, 
+			<a href="class-Scene7.Requests.AbstractRequest.html#_getAllowedEncodings">getAllowedEncodings()</a>, 
 			<a href="class-Scene7.Requests.AbstractRequest.html#_getCommands">getCommands()</a>, 
 			<a href="class-Scene7.Requests.AbstractRequest.html#_getObscuredQuery">getObscuredQuery()</a>, 
 			<a href="class-Scene7.Requests.AbstractRequest.html#_getQuery">getQuery()</a>, 
 			<a href="class-Scene7.Requests.AbstractRequest.html#_getUri">getUri()</a>, 
 			<a href="class-Scene7.Requests.AbstractRequest.html#_render">render()</a>, 
+			<a href="class-Scene7.Requests.AbstractRequest.html#_renderRequestType">renderRequestType()</a>, 
 			<a href="class-Scene7.Requests.AbstractRequest.html#_setBaseUrl">setBaseUrl()</a>, 
 			<a href="class-Scene7.Requests.AbstractRequest.html#_setFactory">setFactory()</a>, 
 			<a href="class-Scene7.Requests.AbstractRequest.html#_setProtocol">setProtocol()</a>
@@ -269,65 +313,10 @@
 
 
 
-	<table class="summary constants" id="constants">
-	<caption>Constants summary</caption>
-	<tr data-order="ALLOWED_RESPONSE_TYPES" id="ALLOWED_RESPONSE_TYPES">
-
-		<td class="attributes"><code>array</code></td>
-		<td class="name">
-			<code>
-				<a href="source-constant-ALLOWED_RESPONSE_TYPES.html#12" title="Go to source code"><b>ALLOWED_RESPONSE_TYPES</b></a>
-			</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#ALLOWED_RESPONSE_TYPES" class="anchor">#</a>
-				<code>[<span class="php-quote">'text'</span>,<span class="php-quote">'javascript'</span>,<span class="php-quote">'xml'</span>,<span class="php-quote">'json'</span>]</code>
-			</div>
-		</td>
-	</tr>
-	</table>
 
 
 
 
-	<table class="summary properties" id="properties">
-	<caption>Properties summary</caption>
-	<tr data-order="responseType" id="$responseType">
-		<td class="attributes"><code>
-			protected  
-			
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-Scene7.Requests.Exists.html#14" title="Go to source code"><var>$responseType</var></a>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$responseType" class="anchor">#</a>
-				<code></code>
-			</div>
-		</td>
-	</tr>
-	</table>
 
 	<table class="summary inherited">
 	<caption>Properties inherited from <a href="class-Scene7.Requests.AbstractRequest.html#properties">Scene7\Requests\AbstractRequest</a></caption>
@@ -335,9 +324,11 @@
 		<td><code>
 			<a href="class-Scene7.Requests.AbstractRequest.html#$baseUrl"><var>$baseUrl</var></a>, 
 			<a href="class-Scene7.Requests.AbstractRequest.html#$commands"><var>$commands</var></a>, 
+			<a href="class-Scene7.Requests.AbstractRequest.html#$encoding"><var>$encoding</var></a>, 
 			<a href="class-Scene7.Requests.AbstractRequest.html#$factory"><var>$factory</var></a>, 
 			<a href="class-Scene7.Requests.AbstractRequest.html#$file"><var>$file</var></a>, 
-			<a href="class-Scene7.Requests.AbstractRequest.html#$protocol"><var>$protocol</var></a>
+			<a href="class-Scene7.Requests.AbstractRequest.html#$protocol"><var>$protocol</var></a>, 
+			<a href="class-Scene7.Requests.AbstractRequest.html#$responseType"><var>$responseType</var></a>
 		</code></td>
 	</tr>
 	</table>
@@ -354,6 +345,6 @@
 </div>
 </div>
 <script src="resources/combined.js?9dec6df73f4b73143a1c5eb8561f67c6e84ce5bf"></script>
-<script src="elementlist.js?b768be19a3b244695d4593768ac87acc651b26b6"></script>
+<script src="elementlist.js?9a42a61d94bab8cf8a50d623f80f9f34883fcaed"></script>
 </body>
 </html>
