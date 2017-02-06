@@ -4,7 +4,7 @@ namespace Scene7\Requests;
 
 use Scene7\Commands;
 
-class Image extends AbstractRequest
+class LoadCache extends AbstractRequest
 {
     use Commands\LayerFactory,
         Commands\Align,
@@ -24,7 +24,6 @@ class Image extends AbstractRequest
         Commands\Locale,
         Commands\Mask,
         Commands\MaskUse,
-        Commands\Name,
         Commands\OutputColorProfile,
         Commands\PrintResolution,
         Commands\Quality,
@@ -34,21 +33,19 @@ class Image extends AbstractRequest
         Commands\Scale,
         Commands\ScaleView,
         Commands\Template,
-        Commands\Timeout,
         Commands\Type,
         Commands\ViewRectangle,
         Commands\Width,
         Commands\XmpEmbed;
 
-    public function __construct($baseUrl, $file, $name)
+    public function __construct($baseUrl, $file)
     {
         $this->setBaseUrl($baseUrl);
         $this->file = $file;
-        $this->setName($name);
     }
 
     public function getRequestType()
     {
-        return 'saveToFile';
+        return 'loadcache';
     }
 }

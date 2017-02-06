@@ -4,7 +4,7 @@ namespace Scene7\Requests;
 
 use Scene7\Commands;
 
-class Image extends AbstractRequest
+class Thumbnail extends AbstractRequest
 {
     use Commands\LayerFactory,
         Commands\Align,
@@ -16,7 +16,6 @@ class Image extends AbstractRequest
         Commands\DefaultImage,
         Commands\EmbedColorProfile,
         Commands\EmbedPathData,
-        Commands\Fit,
         Commands\Format,
         Commands\Height,
         Commands\Id,

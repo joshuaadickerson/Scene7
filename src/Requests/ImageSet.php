@@ -11,11 +11,12 @@ class ImageSet extends AbstractRequest
     use Commands\ResponseType,
         Commands\Id;
 
-    public function __construct($baseUrl, $file)
+    public function __construct($baseUrl, $file, $responseType = '', $encoding = '')
     {
         $this->setBaseUrl($baseUrl);
         $this->file = $file;
-        $this->addCommand(['req' => $this->getRequestType()]);
+        $this->setResponseType($responseType);
+        $this->setEncoding($encoding);
     }
 
     public function getRequestType()

@@ -17,6 +17,10 @@ abstract class AbstractRequest implements RenderInterface
     protected $factory;
     /** @var string */
     protected $protocol = '';
+    /** @var string */
+    protected $responseType = '';
+    /** @var string */
+    protected $encoding = '';
 
     /**
      * @return string
@@ -96,8 +100,30 @@ abstract class AbstractRequest implements RenderInterface
         return ($this->protocol ?: '')
             . $this->baseUrl
             . $this->file
-            . (!empty($this->responseType) ? ',' . $this->responseType : '')
-            . '?' . $this->getQuery($obscure);
+            . '?'
+            . $this->renderRequestType()
+            . $this->getQuery($obscure);
+    }
+
+    protected function renderRequestType()
+    {
+        $requestType = $this->getRequestType();
+
+        if ($requestType !== 'img' && !empty($requestType)) {
+            $requestType = 'req=' . $requestType . '&';
+
+            if (!empty($this->responseType) || !empty($this->encoding)) {
+                $requestType .= ',' . $this->responseType;
+            }
+
+            if (!empty($this->encoding)) {
+                $requestType .= ',' . $this->encoding;
+            }
+        } else {
+            $requestType = '';
+        }
+
+        return $requestType;
     }
 
     /**

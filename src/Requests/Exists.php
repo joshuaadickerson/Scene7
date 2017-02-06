@@ -3,13 +3,12 @@
 namespace Scene7\Requests;
 
 use Scene7\Commands;
+use Scene7\Definitions\ResponseTypes;
 
 class Exists extends AbstractRequest
 {
     use Commands\ResponseType,
         Commands\Id;
-
-    protected $responseType;
 
     public function __construct($baseUrl, $file)
     {
