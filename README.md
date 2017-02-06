@@ -7,8 +7,8 @@ use a callback. This allows you to do a lot more than with another method.
 
 ```php
 $callback = function (AbstractRequest $request) {
-    switch ($request->getRequestType) {
-        case 'image':
+    switch ($request->getRequestType()) {
+        case 'img':
             $request
                 ->setDefaultImage('MyDefaultImage')
                 ->setId(rand(0,100));
