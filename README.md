@@ -69,4 +69,4 @@ If you have a feature request or issue, I consider that a contribution and welco
 
 
 ## License ##
-This work is licensed in the public domain.
+This work is licensed under the BSD-3 clause license
