@@ -4,6 +4,14 @@ namespace Scene7\Commands\Layer;
 
 trait Extend
 {
+    /**
+     * @param int|float $left
+     * @param int|float $top
+     * @param int|float $right
+     * @param int|float $bottom
+     * @param bool $normalized
+     * @return $this
+     */
     public function setExtend($left, $top, $right, $bottom, $normalized = false)
     {
         if ($normalized) {
@@ -20,6 +28,13 @@ trait Extend
         return $this;
     }
 
+    /**
+     * @param float $left
+     * @param float $top
+     * @param float $right
+     * @param float $bottom
+     * @return $this
+     */
     public function setExtendNormalized($left, $top, $right, $bottom)
     {
         $left   = (float) $left;

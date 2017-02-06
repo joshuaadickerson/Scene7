@@ -4,6 +4,14 @@ namespace Scene7\Commands;
 
 trait Crop
 {
+    /**
+     * @param int|float $coordX
+     * @param int|float $coordY
+     * @param int|float $sizeX
+     * @param int|float $sizeY
+     * @param bool $normalized
+     * @return $this
+     */
     public function setCrop($coordX, $coordY, $sizeX, $sizeY, $normalized = false)
     {
         if ($normalized) {
@@ -20,6 +28,13 @@ trait Crop
         return $this;
     }
 
+    /**
+     * @param int $coordX
+     * @param int $coordY
+     * @param int $sizeX
+     * @param int $sizeY
+     * @return $this
+     */
     public function setCropNormalized($coordX, $coordY, $sizeX, $sizeY)
     {
         $coordX = (float) $coordX;

@@ -4,6 +4,10 @@ namespace Scene7\Commands;
 
 trait Scale
 {
+    /**
+     * @param float $factor
+     * @return $this
+     */
     public function setScale($factor)
     {
         $factor = (float) $factor;

@@ -3,14 +3,13 @@
 namespace Scene7\Requests;
 
 use Scene7\Commands;
+use Scene7\Definitions\ResponseTypes;
+use Scene7\Definitions\Encodings;
 
 class ImageSet extends AbstractRequest
 {
     use Commands\ResponseType,
         Commands\Id;
-
-    const ALLOWED_RESPONSE_TYPES = ['text', 'javascript', 'xml', 'json'];
-    const ALLOWED_ENCODINGS = ['UTF-8', 'UTF-16', 'UTF-16LE', 'UTF-16BE', 'ISO-8859-1'];
 
     public function __construct($baseUrl, $file)
     {
@@ -22,5 +21,26 @@ class ImageSet extends AbstractRequest
     public function getRequestType()
     {
         return 'exists';
+    }
+
+    public function getAllowedResponseTypes()
+    {
+        return [
+            ResponseTypes::TEXT,
+            ResponseTypes::JAVASCRIPT,
+            ResponseTypes::XML,
+            ResponseTypes::JSON,
+        ];
+    }
+
+    public function getAllowedEncodings()
+    {
+        return [
+            Encodings::ISO_8859_1,
+            Encodings::UTF_8,
+            Encodings::UTF_16,
+            Encodings::UTF_16LE,
+            Encodings::UTF_16BE,
+        ];
     }
 }

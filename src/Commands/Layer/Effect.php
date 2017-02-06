@@ -4,6 +4,10 @@ namespace Scene7\Commands\Layer;
 
 trait Effect
 {
+    /**
+     * @param int $effect
+     * @return $this
+     */
     public function setEffect($effect)
     {
         $effect = (int) $effect;

@@ -7,8 +7,11 @@ use Scene7\Requests\AbstractRequest;
 
 class Factory
 {
+    /** @var string */
     protected $baseUrl;
+    /** @var callable */
     protected $defaultsCallback;
+    /** @var callable */
     protected $layerDefaultsCallback;
 
     /**
@@ -24,6 +27,10 @@ class Factory
         }
     }
 
+    /**
+     * @param string $file
+     * @return Requests\Image
+     */
     public function newImage($file)
     {
         $image = new Requests\Image($this->baseUrl, $file);
@@ -33,6 +40,11 @@ class Factory
         return $image;
     }
 
+    /**
+     * @param int|string $id
+     * @param string|null $name
+     * @return Layer
+     */
     public function newLayer($id, $name = null)
     {
         $layer = new Layer($id, $name);
@@ -40,6 +52,10 @@ class Factory
         return $layer;
     }
 
+    /**
+     * @param string $baseUrl
+     * @return $this
+     */
     public function setBaseUrl($baseUrl)
     {
         if ($baseUrl[strlen($baseUrl)-1] !== '/') {
@@ -50,6 +66,10 @@ class Factory
         return $this;
     }
 
+    /**
+     * @param string $protocol
+     * @return $this
+     */
     public function setProtocol($protocol)
     {
         $this->protocol = $protocol;

@@ -4,6 +4,13 @@ namespace Scene7\Commands;
 
 trait UnsharpMask
 {
+    /**
+     * @param float $amount
+     * @param float|null $radius
+     * @param float|null $threshold
+     * @param bool|null $monochrome
+     * @return $this
+     */
     public function setUnsharpMask($amount, $radius = null, $threshold = null, $monochrome = null)
     {
         $amount = (float) $amount;

@@ -4,6 +4,12 @@ namespace Scene7\Commands;
 
 trait Anchor
 {
+    /**
+     * @param int|float $x
+     * @param int|float $y
+     * @param bool|false $normalized
+     * @return $this
+     */
     public function setAnchor($x, $y, $normalized = false)
     {
         if ($normalized) {
@@ -18,6 +24,11 @@ trait Anchor
         return $this;
     }
 
+    /**
+     * @param float $x
+     * @param float $y
+     * @return $this
+     */
     public function setAnchorNormalized($x, $y)
     {
         $x = (float) $x;

@@ -20,21 +20,37 @@ class Source extends AbstractTag
         return $this->setSrcset(new Srcset($image->render(), $image, $multipliers));
     }
 
+    /**
+     * @param string $srcset
+     * @return $this
+     */
     public function setSrcset($srcset)
     {
         return $this->setAttribute('srcset', $srcset);
     }
 
+    /**
+     * @param string $src
+     * @return $this
+     */
     public function setSrc($src)
     {
         return $this->setAttribute('src', $src);
     }
 
+    /**
+     * @param string $type
+     * @return $this
+     */
     public function setType($type)
     {
         return $this->setAttribute('type', $type);
     }
 
+    /**
+     * @param string $media
+     * @return $this
+     */
     public function setMedia($media)
     {
         return $this->setAttribute('media', $media);

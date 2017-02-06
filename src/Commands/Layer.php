@@ -6,10 +6,7 @@ use Scene7\Commands\Layer as LayerCommand;
 use Scene7\RenderInterface;
 
 /**
- * Class Layer
- * @package Scene7
- *
- * Layer is a special command because they have nested commands
+ * Layer is a special command because it has nested commands
  */
 class Layer implements RenderInterface
 {
@@ -37,6 +34,7 @@ class Layer implements RenderInterface
         LayerCommand\Position,
         LayerCommand\Saturation,
         LayerCommand\Sharpen,
+        LayerCommand\Source,
         LayerCommand\Text,
         LayerCommand\TextAngle,
         LayerCommand\TextAttributes,
@@ -44,10 +42,18 @@ class Layer implements RenderInterface
         LayerCommand\TextPath,
         LayerCommand\TextPhotoshopCompatible;
 
+    /** @var int|string */
     protected $id;
+    /** @var string */
     protected $name;
-    protected $commands = array();
+    /** @var string[] */
+    protected $commands = [];
 
+    /**
+     * Layer constructor.
+     * @param int|string $id
+     * @param string $name
+     */
     public function __construct($id, $name)
     {
         $this->id = $id;
@@ -84,10 +90,4 @@ class Layer implements RenderInterface
     {
         return $this->render();
     }
-
-    /*
-     * To implement
-     * src
-     *
-     */
 }

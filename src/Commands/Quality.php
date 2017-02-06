@@ -4,6 +4,11 @@ namespace Scene7\Commands;
 
 trait Quality
 {
+    /**
+     * @param int $percentage
+     * @param bool|null $chroma
+     * @return $this
+     */
     public function setQuality($percentage, $chroma = null)
     {
         $percentage = (int) $percentage;

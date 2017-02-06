@@ -3,9 +3,16 @@
 namespace Scene7\Commands;
 
 use Scene7\Definitions\Formats;
+use Scene7\Definitions\PixelTypes;
 
 trait Format
 {
+    /**
+     * @param string $format Definitions\Formats
+     * @param string $pixelType
+     * @param string $compression
+     * @return $this
+     */
     public function setFormat($format, $pixelType = '', $compression = '')
     {
         if (!in_array($format, $this->getAllowedFormats())) {
@@ -54,11 +61,15 @@ trait Format
 
     public function getAllowedPixelTypes()
     {
-        return array('rgb', 'gray', 'cmyk');
+        return [
+            PixelTypes::CMYK,
+            PixelTypes::GRAY,
+            PixelTypes::RGB,
+        ];
     }
 
     public function getAllowedCompressionTypes()
     {
-        return array('none', 'lzw', 'zip', 'jpeg');
+        return ['none', 'lzw', 'zip', 'jpeg'];
     }
 }

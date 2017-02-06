@@ -4,6 +4,10 @@ namespace Scene7\Commands\Layer;
 
 trait Blur
 {
+    /**
+     * @param float $radius
+     * @return $this
+     */
     public function setBlur($radius)
     {
         $radius = (float) $radius;

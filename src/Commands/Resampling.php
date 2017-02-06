@@ -6,6 +6,10 @@ use Scene7\Definitions\ResamplingModes;
 
 trait Resampling
 {
+    /**
+     * @param string $mode One of Definitions\ResamplingModes::*
+     * @return $this
+     */
     public function setResampling($mode)
     {
         if (!in_array($mode, $this->getAllowedResamplingModes())) {

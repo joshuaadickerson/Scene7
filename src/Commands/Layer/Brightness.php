@@ -4,6 +4,10 @@ namespace Scene7\Commands\Layer;
 
 trait Brightness
 {
+    /**
+     * @param int $adjustment
+     * @return $this
+     */
     public function setBrightness($adjustment)
     {
         $adjustment = (int) $adjustment;

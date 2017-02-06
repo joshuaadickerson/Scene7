@@ -4,8 +4,8 @@ namespace Scene7;
 
 class Request
 {
-    protected $commands = array();
-    protected $layers = array();
+    protected $commands = [];
+    protected $layers   = [];
     protected $factory;
     protected $baseUrl;
 
@@ -134,7 +134,7 @@ class Request
 
     public function getAllowedFitModes()
     {
-        return array('fit', 'constrain', 'crop', 'wrap', 'stretch', 'hfit', 'vfit');
+        return ['fit', 'constrain', 'crop', 'wrap', 'stretch', 'hfit', 'vfit'];
     }
 
     public function setFormat($format, $pixelType = '', $compression = '')
@@ -167,17 +167,17 @@ class Request
 
     public function getAllowedFormats()
     {
-        return array('jpeg', 'png', 'png-alpha', 'tif', 'tif-alpha', 'swf', 'swf-alpha', 'eps', 'gif', 'gif-alpha', 'm3u8', 'f4m');
+        return ['jpeg', 'png', 'png-alpha', 'tif', 'tif-alpha', 'swf', 'swf-alpha', 'eps', 'gif', 'gif-alpha', 'm3u8', 'f4m'];
     }
 
     public function getAllowedPixelTypes()
     {
-        return array('rgb', 'gray', 'cmyk');
+        return ['rgb', 'gray', 'cmyk'];
     }
 
     public function getAllowedCompressionTypes()
     {
-        return array('none', 'lzw', 'zip', 'jpeg');
+        return ['none', 'lzw', 'zip', 'jpeg'];
     }
 
     public function setHeight($height)

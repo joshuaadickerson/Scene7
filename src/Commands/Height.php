@@ -4,6 +4,10 @@ namespace Scene7\Commands;
 
 trait Height
 {
+    /**
+     * @param int $height
+     * @return $this
+     */
     public function setHeight($height)
     {
         $height = (int) $height;
@@ -15,6 +19,9 @@ trait Height
         return $this;
     }
 
+    /**
+     * @return null|int
+     */
     public function getHeight()
     {
         return isset($this->commands['hei']) ? $this->commands['hei'] : null;

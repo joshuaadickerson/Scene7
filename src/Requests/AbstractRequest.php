@@ -7,11 +7,16 @@ use Scene7\RenderInterface;
 
 abstract class AbstractRequest implements RenderInterface
 {
-    protected $baseUrl;
-    protected $file;
-    protected $commands = array();
+    /** @var string */
+    protected $baseUrl = '';
+    /** @var string */
+    protected $file = '';
+    /** @var array */
+    protected $commands = [];
+    /** @var Factory */
     protected $factory;
-    protected $protocol;
+    /** @var string */
+    protected $protocol = '';
 
     /**
      * @return string
@@ -30,11 +35,18 @@ abstract class AbstractRequest implements RenderInterface
         return $this;
     }
 
+    /**
+     * @return array
+     */
     public function getCommands()
     {
         return $this->commands;
     }
 
+    /**
+     * @param bool $obscure
+     * @return string
+     */
     public function getQuery($obscure = false)
     {
         if ($obscure) {
@@ -46,7 +58,10 @@ abstract class AbstractRequest implements RenderInterface
         return $query;
     }
 
-    // @todo broken
+    /**
+     * @todo broken
+     * @return string
+     */
     public function getObscuredQuery()
     {
         $commands = [];
@@ -72,6 +87,10 @@ abstract class AbstractRequest implements RenderInterface
         return $this->getUri($obscure);
     }
 
+    /**
+     * @param bool $obscure
+     * @return string
+     */
     public function getUri($obscure = false)
     {
         return ($this->protocol ?: '')
@@ -81,6 +100,10 @@ abstract class AbstractRequest implements RenderInterface
             . '?' . $this->getQuery($obscure);
     }
 
+    /**
+     * @param string $protocol
+     * @return $this
+     */
     public function setProtocol($protocol)
     {
         $this->protocol = $protocol;
@@ -96,5 +119,15 @@ abstract class AbstractRequest implements RenderInterface
     {
         $this->factory = $factory;
         return $this;
+    }
+
+    public function getAllowedResponseTypes()
+    {
+        return [];
+    }
+
+    public function getAllowedEncodings()
+    {
+        return [];
     }
 }

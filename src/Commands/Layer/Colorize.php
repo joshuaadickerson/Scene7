@@ -4,6 +4,11 @@ namespace Scene7\Commands\Layer;
 
 trait Colorize
 {
+    /**
+     * @param string $color
+     * @param string|null $compensation
+     * @return $this
+     */
     public function setColorize($color, $compensation = null)
     {
         $allowedCompensationModes = ['off', 'norm'];

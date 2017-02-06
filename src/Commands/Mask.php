@@ -4,13 +4,13 @@ namespace Scene7\Commands;
 
 trait Mask
 {
-    public function setMask($use)
+    /**
+     * @param string $mask
+     * @return $this
+     */
+    public function setMask($mask)
     {
-        if (!in_array($use, $this->getAllowedMaskUses())) {
-            throw new \InvalidArgumentException('Invalid mask usage');
-        }
-
-        $this->addCommand(['maskUse' => $use]);
+        $this->addCommand(['mask' => $mask]);
         return $this;
     }
 }

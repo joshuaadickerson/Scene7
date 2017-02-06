@@ -4,16 +4,21 @@ namespace Scene7\Commands;
 
 trait RegionOfInterest
 {
+    /**
+     * @param int $coordX
+     * @param int $coordY
+     * @param int $sizeX
+     * @param int $sizeY
+     * @return $this
+     */
     public function setRegionOfInterest($coordX, $coordY, $sizeX, $sizeY)
     {
         $coordX = (int) $coordX;
         $coordY = (int) $coordY;
-        $sizeX = (int) $sizeX;
-        $sizeY = (int) $sizeY;
+        $sizeX  = (int) $sizeX;
+        $sizeY  = (int) $sizeY;
 
-        $region = $coordX . ',' . $coordY . ',' . $sizeX . ',' . $sizeY;
-
-        $this->addCommand(['rgn' => $region]);
+        $this->addCommand(['rgn' => $coordX . ',' . $coordY . ',' . $sizeX . ',' . $sizeY]);
         return $this;
     }
 }

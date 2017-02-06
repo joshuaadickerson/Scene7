@@ -6,6 +6,11 @@ use Scene7\Definitions\FitModes as Mode;
 
 trait Fit
 {
+    /**
+     * @param string $mode Definitions\FitModes::*
+     * @param bool $upscale
+     * @return $this
+     */
     public function setFitMode($mode, $upscale)
     {
         if (!in_array($mode, $this->getAllowedFitModes())) {

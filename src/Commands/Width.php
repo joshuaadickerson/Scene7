@@ -4,6 +4,10 @@ namespace Scene7\Commands;
 
 trait Width
 {
+    /**
+     * @param int $width
+     * @return $this
+     */
     public function setWidth($width)
     {
         $width = (int) $width;
@@ -15,6 +19,9 @@ trait Width
         return $this;
     }
 
+    /**
+     * @return int|null
+     */
     public function getWidth()
     {
         return isset($this->commands['wid']) ? $this->commands['wid'] : null;

@@ -4,6 +4,10 @@ namespace Scene7\Commands;
 
 trait ScaleView
 {
+    /**
+     * @param float $factor
+     * @return $this
+     */
     public function setScaleView($factor)
     {
         $factor = (float) $factor;

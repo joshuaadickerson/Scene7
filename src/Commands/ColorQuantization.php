@@ -2,8 +2,17 @@
 
 namespace Scene7\Commands;
 
+use Scene7\Definitions\ColorQuantizationTypes;
+
 trait ColorQuantization
 {
+    /**
+     * @param string $type Definitions\ColorQuantizationTypes::*
+     * @param bool $disableDiffuse
+     * @param string|null $numColors off|diffuse
+     * @param string|null $colorList
+     * @return $this
+     */
     public function setColorQuantization($type, $disableDiffuse = false, $numColors = null, $colorList = null)
     {
         if (!in_array($type, $this->getAllowedColorQuantizationTypes())) {
@@ -29,6 +38,10 @@ trait ColorQuantization
 
     public function getAllowedColorQuantizationTypes()
     {
-        return ['adaptive', 'web', 'mac'];
+        return [
+            ColorQuantizationTypes::ADAPTIVE,
+            ColorQuantizationTypes::MAC,
+            ColorQuantizationTypes::WEB,
+        ];
     }
 }

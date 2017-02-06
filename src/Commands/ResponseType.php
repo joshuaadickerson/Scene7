@@ -6,7 +6,7 @@ trait ResponseType
 {
     protected function setResponseType($responseType)
     {
-        if (!in_array($responseType, self::ALLOWED_RESPONSE_TYPES)) {
+        if (!in_array($responseType, $this->getAllowedResponseTypes())) {
             throw new \InvalidArgumentException('Invalid response type');
         }
 

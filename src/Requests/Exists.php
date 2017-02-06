@@ -9,8 +9,6 @@ class Exists extends AbstractRequest
     use Commands\ResponseType,
         Commands\Id;
 
-    const ALLOWED_RESPONSE_TYPES = ['text', 'javascript', 'xml', 'json'];
-
     protected $responseType;
 
     public function __construct($baseUrl, $file)
@@ -23,5 +21,15 @@ class Exists extends AbstractRequest
     public function getRequestType()
     {
         return 'exists';
+    }
+
+    public function getAllowedResponseTypes()
+    {
+        return [
+            ResponseTypes::TEXT,
+            ResponseTypes::JAVASCRIPT,
+            ResponseTypes::XML,
+            ResponseTypes::JSON,
+        ];
     }
 }

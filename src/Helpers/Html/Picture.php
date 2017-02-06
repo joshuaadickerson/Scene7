@@ -14,6 +14,12 @@ class Picture extends AbstractTag
         $this->setAttributes($attributes);
     }
 
+    /**
+     * @param Requests\Image $image
+     * @param int[] $multipliers
+     * @param array $attributes
+     * @return Picture
+     */
     public function addSourceFromImage(Requests\Image $image, $multipliers = [], array $attributes = [])
     {
         $source = new Source($attributes);
@@ -50,6 +56,11 @@ class Picture extends AbstractTag
         return $this;
     }
 
+    /**
+     * @param Image|string $image
+     * @param array $attributes
+     * @return $this
+     */
     public function setImage($image, array $attributes = [])
     {
         if (!($image instanceof Image)) {
@@ -86,6 +97,10 @@ class Picture extends AbstractTag
         return $sources;
     }
 
+    /**
+     * @throws \RuntimeException if no image is set
+     * @return string
+     */
     protected function renderImage()
     {
         if (!($this->image instanceof Image)) {

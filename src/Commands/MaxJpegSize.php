@@ -4,6 +4,10 @@ namespace Scene7\Commands;
 
 trait MaxJpegSize
 {
+    /**
+     * @param int $kilobytes
+     * @return $this
+     */
     public function setMaxJpegSize($kilobytes)
     {
         if ((int) $kilobytes > 0) {

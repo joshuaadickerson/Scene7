@@ -10,13 +10,6 @@ class ImageProps extends AbstractRequest
     use Commands\ResponseType,
         Commands\Id;
 
-    const ALLOWED_RESPONSE_TYPES = [
-        ResponseTypes::TEXT,
-        ResponseTypes::JAVASCRIPT,
-        ResponseTypes::XML,
-        ResponseTypes::JSON,
-    ];
-
     public function __construct($baseUrl, $file)
     {
         $this->setBaseUrl($baseUrl);
@@ -27,5 +20,15 @@ class ImageProps extends AbstractRequest
     public function getRequestType()
     {
         return 'imageprops';
+    }
+
+    public function getAllowedResponseTypes()
+    {
+        return [
+            ResponseTypes::TEXT,
+            ResponseTypes::JAVASCRIPT,
+            ResponseTypes::XML,
+            ResponseTypes::JSON,
+        ];
     }
 }
