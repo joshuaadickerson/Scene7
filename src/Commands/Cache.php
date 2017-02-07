@@ -10,7 +10,6 @@ trait Cache
      */
     public function setCache($control)
     {
-        $this->addCommand(['cache' => $control]);
-        return $this;
+        return $this->addCommand(['cache' => $control]);
     }
 }

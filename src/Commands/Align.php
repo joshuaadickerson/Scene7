@@ -2,12 +2,14 @@
 
 namespace Scene7\Commands;
 
+use Scene7\Requests\AbstractRequest;
+
 trait Align
 {
     /**
      * @param float $horizontal
      * @param float $vertical
-     * @return $this
+     * @return AbstractRequest
      */
     public function setAlign($horizontal, $vertical)
     {

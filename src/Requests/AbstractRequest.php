@@ -105,6 +105,9 @@ abstract class AbstractRequest implements RenderInterface
             . $this->getQuery($obscure);
     }
 
+    /**
+     * @return string
+     */
     protected function renderRequestType()
     {
         $requestType = $this->getRequestType();
@@ -147,11 +150,17 @@ abstract class AbstractRequest implements RenderInterface
         return $this;
     }
 
+    /**
+     * @return string[]
+     */
     public function getAllowedResponseTypes()
     {
         return [];
     }
 
+    /**
+     * @return string[]
+     */
     public function getAllowedEncodings()
     {
         return [];

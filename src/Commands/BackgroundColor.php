@@ -2,15 +2,16 @@
 
 namespace Scene7\Commands;
 
+use Scene7\Requests\AbstractRequest;
+
 trait BackgroundColor
 {
     /**
      * @param string $color
-     * @return $this
+     * @return AbstractRequest
      */
     public function setBackgroundColor($color)
     {
-        $this->addCommand(['bgc' => $color]);
-        return $this;
+        return $this->addCommand(['bgc' => $color]);
     }
 }

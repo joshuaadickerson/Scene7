@@ -38,6 +38,10 @@ class Properties extends AbstractRequest
         Commands\Width,
         Commands\XmpEmbed;
 
+    /**
+     * @param string $baseUrl
+     * @param string $file
+     */
     public function __construct($baseUrl, $file)
     {
         $this->setBaseUrl($baseUrl);

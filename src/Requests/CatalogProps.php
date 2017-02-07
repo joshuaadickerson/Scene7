@@ -20,7 +20,6 @@ class CatalogProps extends AbstractRequest
     {
         $this->setBaseUrl($baseUrl);
         $this->file = $file;
-        $this->addCommand(['req' => $this->getRequestType()]);
         $this->setResponseType($responseType);
     }
 

@@ -2,13 +2,15 @@
 
 namespace Scene7\Commands;
 
+use Scene7\Requests\AbstractRequest;
+
 trait Anchor
 {
     /**
      * @param int|float $x
      * @param int|float $y
      * @param bool|false $normalized
-     * @return $this
+     * @return AbstractRequest
      */
     public function setAnchor($x, $y, $normalized = false)
     {
@@ -27,7 +29,7 @@ trait Anchor
     /**
      * @param float $x
      * @param float $y
-     * @return $this
+     * @return AbstractRequest
      */
     public function setAnchorNormalized($x, $y)
     {

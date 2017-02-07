@@ -1,21 +1,39 @@
 # Adobe Scene7 HTTP Protocol API #
 A library to create request strings for the Adobe Scene7 HTTP Protocol.
 
+## Factory ##
+The factory should be used to create a new request and layers.
+
+```php
+// See "Factory Defaults Callback"
+$factory = new Scene7\Factory('https://www.example.com', $callback);
+$image = $factory->newImage('myProductImage');
+echo $image->render();
+
+// Output:
+// https://www.example.com/myProductImage?defaultImage=MyDefaultImage&id=42
+```
+
+All requests and helpers also implement __toString() so you don't have to call render() directly.
+
 ### Factory Defaults Callback ##
 I decided that instead of trying to implement a defaults setter using an array or an object or something else, I would
 use a callback. This allows you to do a lot more than with another method.
 
 ```php
 $callback = function (AbstractRequest $request) {
+    // Apply defaults based on the request type
     switch ($request->getRequestType()) {
         case 'img':
             $request
                 ->setDefaultImage('MyDefaultImage')
-                ->setId(rand(0,100));
+                ->setId(rand(0, 100));
             break;
     }
 }
 ```
+
+You can set the layer defaults the same as well. They will only be applied when you add a new layer.
 
 ## Helpers ##
 
@@ -26,8 +44,8 @@ The easiest way to create a picture tag is using `Picture::addSourceListFromImag
 
 #### Example ####
 ```php
-$picture = new Picture;
-$image = new \Scene7\Requests\Image('https://example.com/', 'myProduct');
+$picture = new Scene7\Helpers\Html\Picture;
+$image = new Scene7\Requests\Image('https://example.com/', 'myProduct');
 $queries = [
     // The key is the media query
     // The value is an array of k/v pairs where the key is the HTML attribute you want to set
@@ -42,6 +60,8 @@ $queries = [
     ],
 ];
 $picture->addSourceListFromImage($queries, $image, [2, 1])->setImage($image);
+
+echo $picture->render();
 
 // Output:
 // <picture><source media="(min-width: 1000px)" srcset="https://example.com/myProduct?wid=1000&hei=1000 2x,https://example.com/myProduct?wid=500&hei=500 1x,"><source media="(min-width: 500px)" srcset="https://example.com/myProduct?wid=500&hei=500 2x,https://example.com/myProduct?wid=250&hei=250 1x,"><img src="https://example.com/myProduct?" alt=""></picture>

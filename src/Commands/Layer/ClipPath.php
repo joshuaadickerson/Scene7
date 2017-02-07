@@ -14,7 +14,7 @@ trait ClipPath
     }
 
     /**
-     * @param string $name
+     * @param string|string[] $name
      * @return mixed
      */
     public function setClipPathEmbedded($name)

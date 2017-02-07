@@ -10,11 +10,14 @@ class Exists extends AbstractRequest
     use Commands\ResponseType,
         Commands\Id;
 
+    /**
+     * @param string $baseUrl
+     * @param string $file
+     */
     public function __construct($baseUrl, $file)
     {
         $this->setBaseUrl($baseUrl);
         $this->file = $file;
-        $this->addCommand(['req' => $this->getRequestType()]);
     }
 
     public function getRequestType()

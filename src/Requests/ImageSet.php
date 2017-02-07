@@ -11,6 +11,12 @@ class ImageSet extends AbstractRequest
     use Commands\ResponseType,
         Commands\Id;
 
+    /**
+     * @param string $baseUrl
+     * @param string $file
+     * @param string $responseType
+     * @param string $encoding
+     */
     public function __construct($baseUrl, $file, $responseType = '', $encoding = '')
     {
         $this->setBaseUrl($baseUrl);
