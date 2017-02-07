@@ -2,6 +2,7 @@
 
 namespace Scene7\Helpers\Html;
 
+use Scene7\Helpers\MediaQueries;
 use Scene7\Requests;
 
 class Picture extends AbstractTag
@@ -32,14 +33,18 @@ class Picture extends AbstractTag
      *
      * This looks complicated, but the goal is merely to reduce the amount of code you have to write
      *
-     * @param array $mediaQueries
+     * @param array|MediaQueries $mediaQueries
      * @param Requests\Image $image
      * @param array $multipliers
      * @param array $attributes
      * @return $this
      */
-    public function addSourceListFromImage(array $mediaQueries, Requests\Image $image, $multipliers = [], array $attributes = [])
+    public function addSourceListFromImage($mediaQueries, Requests\Image $image, $multipliers = [], array $attributes = [])
     {
+        if (!is_array($mediaQueries) && !($mediaQueries instanceof MediaQueries)) {
+            throw new \InvalidArgumentException('$mediaQueries must be an array or instance of Scene7\Helpers\MediaQueries');
+        }
+
         foreach ($mediaQueries as $query => $imageAttributes) {
             // Set the image to match the query
             $cloneImg = clone $image;
