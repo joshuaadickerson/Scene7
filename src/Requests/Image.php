@@ -34,6 +34,7 @@ class Image extends AbstractRequest
         Commands\ScaleView,
         Commands\Template,
         Commands\Type,
+        Commands\UnsharpMask,
         Commands\ViewRectangle,
         Commands\Width,
         Commands\XmpEmbed;
