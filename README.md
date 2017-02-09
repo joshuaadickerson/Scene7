@@ -1,6 +1,14 @@
 # Adobe Scene7 HTTP Protocol API #
 A library to create request strings for the Adobe Scene7 HTTP Protocol.
 
+## Installation ##
+The easiest way to install this library is with Composer
+`composer require joshuaadickerson/scene7`
+
+There is no version yet since I'm not ready to call it stable.
+
+The minimum PHP version is 5.6.
+
 ## Factory ##
 The factory should be used to create a new request and layers.
 
