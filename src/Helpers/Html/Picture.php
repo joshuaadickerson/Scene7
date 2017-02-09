@@ -62,14 +62,14 @@ class Picture extends AbstractTag
     }
 
     /**
-     * @param Image|string $image
+     * @param Image|string $image An image tag or a string to request the image
      * @param array $attributes
      * @return $this
      */
     public function setImage($image, array $attributes = [])
     {
         if (!($image instanceof Image)) {
-            $image = new Image($image, $attributes['alt'] ?: '', $attributes);
+            $image = new Image($image, isset($attributes['alt']) ? $attributes['alt'] : '', $attributes);
         }
 
         $this->image = $image;
