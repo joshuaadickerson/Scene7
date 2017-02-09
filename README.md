@@ -9,6 +9,8 @@ There is no version yet since I'm not ready to call it stable.
 
 The minimum PHP version is 5.6.
 
+[![Build Status](https://travis-ci.org/joshuaadickerson/Scene7.svg?branch=master)](https://travis-ci.org/joshuaadickerson/Scene7)
+
 ## Factory ##
 The factory should be used to create a new request and layers.
 
