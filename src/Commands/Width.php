@@ -2,6 +2,8 @@
 
 namespace Scene7\Commands;
 
+use Scene7\Requests\AbstractRequest;
+
 trait Width
 {
     /**
@@ -26,4 +28,10 @@ trait Width
     {
         return isset($this->commands['wid']) ? $this->commands['wid'] : null;
     }
+
+    /**
+     * @param array $commands
+     * @return AbstractRequest
+     */
+    abstract public function addCommand(array $commands);
 }

@@ -4,6 +4,11 @@ namespace Scene7\Commands\Layer;
 
 trait Opacity
 {
+    /**
+     * @param int $percentage
+     * @param null $fillPercentage
+     * @return $this
+     */
     public function setOpacity($percentage, $fillPercentage = null)
     {
         $opacity = (int) $percentage;

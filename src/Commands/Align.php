@@ -18,4 +18,10 @@ trait Align
         $this->addCommand(['align' => $horizontal . ',' . $vertical]);
         return $this;
     }
+
+    /**
+     * @param array $commands
+     * @return AbstractRequest
+     */
+    abstract public function addCommand(array $commands);
 }

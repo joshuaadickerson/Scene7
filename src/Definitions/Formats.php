@@ -5,7 +5,7 @@ namespace Scene7\Definitions;
 final class Formats
 {
     const JPEG          = 'jpeg';
-    const JPG           = 'jpeg';
+    const JPG           = 'jpg';
     const PNG           = 'png';
     const PNG_A         = 'png-alpha';
     const PNG_ALPHA     = 'png-alpha';

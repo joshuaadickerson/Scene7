@@ -2,6 +2,8 @@
 
 namespace Scene7\Commands;
 
+use Scene7\Requests\AbstractRequest;
+
 trait Height
 {
     /**
@@ -26,4 +28,10 @@ trait Height
     {
         return isset($this->commands['hei']) ? $this->commands['hei'] : null;
     }
+
+    /**
+     * @param array $commands
+     * @return AbstractRequest
+     */
+    abstract public function addCommand(array $commands);
 }

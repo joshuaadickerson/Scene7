@@ -37,6 +37,9 @@ trait LayerFactory
         return $this;
     }
 
+    /**
+     * @return int|string
+     */
     public function getMaxLayer()
     {
         return empty($this->layers) ? 0 : max(array_keys($this->layers));
@@ -83,7 +86,7 @@ trait LayerFactory
     {
         // @todo this doesn't work
         if ($obscure) {
-
+            $query = parent::getQuery();
         } else {
             $query = parent::getQuery();
             $query .= $this->renderLayers();

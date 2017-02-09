@@ -44,6 +44,7 @@ trait Format
     public function getAllowedFormats()
     {
         return [
+            Formats::JPG,
             Formats::JPEG,
             Formats::PNG,
             Formats::PNG_ALPHA,
