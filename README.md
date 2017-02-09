@@ -10,6 +10,7 @@ There is no version yet since I'm not ready to call it stable.
 The minimum PHP version is 5.6.
 
 [![Build Status](https://travis-ci.org/joshuaadickerson/Scene7.svg?branch=master)](https://travis-ci.org/joshuaadickerson/Scene7)
+[![Documentation Status](https://readthedocs.org/projects/scene7/badge/?version=latest)](http://scene7.readthedocs.io/en/latest/?badge=latest)
 
 ## Factory ##
 The factory should be used to create a new request and layers.
@@ -48,7 +49,7 @@ You can set the layer defaults the same as well. They will only be applied when 
 ## Helpers ##
 
 ### Picture ###
-You can quickly create a picture tag with nested <source> and <img> tags.
+You can quickly create a picture tag with nested `<source>` and `<img>` tags.
 
 The easiest way to create a picture tag is using `Picture::addSourceListFromImage()`.
 
