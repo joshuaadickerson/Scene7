@@ -92,6 +92,15 @@ abstract class AbstractTag implements RenderInterface
     }
 
     /**
+     * @param string $attribute
+     * @return null|string
+     */
+    public function getAttribute($attribute)
+    {
+        return $this->hasAttribute($attribute) ? $this->attributes[$attribute] : null;
+    }
+
+    /**
      * @return string
      */
     protected function renderAttributes()

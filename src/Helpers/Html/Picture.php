@@ -112,6 +112,14 @@ class Picture extends AbstractTag
             throw new \RuntimeException('No image set');
         }
 
+        if ($this->hasAttribute('alt') && !$this->image->hasAttribute('alt')) {
+            $this->image->setAttribute('alt', $this->getAttribute('alt'));
+        }
+
+        if ($this->hasAttribute('title') && !$this->image->hasAttribute('title')) {
+            $this->image->setAttribute('title', $this->getAttribute('title'));
+        }
+
         return $this->image->render();
     }
 
