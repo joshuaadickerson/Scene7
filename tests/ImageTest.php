@@ -20,7 +20,7 @@ final class ImageTest extends TestCase
     public function testAlign()
     {
         $image = $this->getImage()->setAlign(0, -1);
-        $this->assertContains('align=0,-1', $image->getUri());
+        $this->assertContains('align=0%2C-1', $image->getUri());
     }
 
     public function testAnchor()
@@ -28,22 +28,22 @@ final class ImageTest extends TestCase
         $image = $this->getImage();
 
         $image->setAnchor(0, 0);
-        $this->assertContains('anchor=0,0', $image->getUri());
+        $this->assertContains('anchor=0%2C0', $image->getUri());
 
         $image->setAnchor(5, 5);
-        $this->assertContains('anchor=5,5', $image->getUri());
+        $this->assertContains('anchor=5%2C5', $image->getUri());
 
         $image->setAnchor(0, 0, true);
-        $this->assertContains('anchorN=0,0', $image->getUri());
+        $this->assertContains('anchorN=0%2C0', $image->getUri());
 
         $image->setAnchor(-0.5, -0.5, true);
-        $this->assertContains('anchorN=-0.5,-0.5', $image->getUri());
+        $this->assertContains('anchorN=-0.5%2C-0.5', $image->getUri());
     }
 
     public function testBackgroundColor()
     {
         $image = $this->getImage()->setBackgroundColor('214,245,130');
-        $this->assertContains('bgc=214,245,130', $image->getUri());
+        $this->assertContains('bgc=214%2C245%2C130', $image->getUri());
     }
 
     public function setTestEmbedColorProfileIs1()

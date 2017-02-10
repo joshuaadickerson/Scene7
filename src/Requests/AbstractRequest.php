@@ -56,7 +56,7 @@ abstract class AbstractRequest implements RenderInterface
         if ($obscure) {
             $query = $this->getObscuredQuery();
         } else {
-            $query = urldecode(http_build_query($this->commands));
+            $query = http_build_query($this->commands);
         }
 
         return $query;
