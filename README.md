@@ -101,3 +101,8 @@ If you have a feature request or issue, I consider that a contribution and welco
 
 ## License ##
 This work is licensed under the BSD-3 clause license
+
+### Association with Adobe ###
+Adobe and Scene7 are trademarks of Adobe Systems Incorporated. This package has no association with them. I would love
+if Adobe stepped up and took over maintenance of this and distrubted it as official, but that is not the case as of now.
+This is _not_ an official package.

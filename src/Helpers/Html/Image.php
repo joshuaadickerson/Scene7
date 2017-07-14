@@ -2,6 +2,8 @@
 
 namespace Scene7\Helpers\Html;
 
+use Scene7\Helpers\Html\Attributes\Srcset;
+
 class Image extends AbstractTag
 {
     /**
@@ -26,7 +28,7 @@ class Image extends AbstractTag
     }
 
     /**
-     * @param string $srcset
+     * @param string|Srcset $srcset
      * @return $this
      */
     public function setSrcset($srcset)
