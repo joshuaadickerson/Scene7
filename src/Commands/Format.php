@@ -57,6 +57,7 @@ trait Format
             Formats::GIF_ALPHA,
             Formats::M3U8,
             Formats::F4M,
+            Formats::WEBP,
         ];
     }
 
