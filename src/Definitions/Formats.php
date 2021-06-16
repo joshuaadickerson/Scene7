@@ -29,4 +29,5 @@ final class Formats
     const GIF           = 'gif';
     const GIF_ALPHA     = 'gif-alpha';
     const F4M           = 'f4m';
+    const WEBP          = 'webp';
 }
