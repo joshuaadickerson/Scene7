@@ -21,6 +21,6 @@
   },
   "require-dev": {
     "apigen/apigen": "4.2.0.x-dev",
-    "phpunit/phpunit": "5.5.*"
+    "phpunit/phpunit": "5.6.*"
   }
 }
